@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./about.css";
 import { profileImage } from "../../images";
 import Button from "@mui/material/Button";
@@ -10,8 +10,14 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaDribbble } from "react-icons/fa";
 import TimelineComponent from "../timelineComponent/TimelineComponent";
 import TimelineComponent2 from "../timelineComponent/timelineComponent2";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 
 const About = () => {
+  const [toggle, setToggle] = useState(1);
+  function updateToggle(id) {
+    setToggle(id);
+  }
   return (
     <div className="about-container">
       <div className="about-me">
@@ -64,6 +70,43 @@ const About = () => {
         </div>
       </div>
       <div className="expEdu">
+        <span className="txt1">Education and Volunteering</span>
+        <div className="tab-container">
+          <div>
+            <Button
+              className={toggle === 1 ? "show-edu-tab" : "edu-tab"}
+              startIcon={<SchoolOutlinedIcon />}
+              sx={{
+                textTransform: "none",
+                fontSize: "1.2rem",
+              }}
+              disableTouchRipple
+              onClick={() => updateToggle(1)}
+            >
+              Education
+            </Button>
+          </div>
+          <div>
+            <Button
+              className={toggle === 2 ? "show-exp-tab" : "exp-tab"}
+              startIcon={<WorkOutlineOutlinedIcon />}
+              sx={{
+                textTransform: "none",
+                // color: "#8C8D8F",
+                fontSize: "1.2rem",
+              }}
+              disableTouchRipple
+              onClick={() => updateToggle(2)}
+            >
+              Volunteering
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className={toggle === 1 ? "show-tl-content" : "tl-content"}>
+        <TimelineComponent />
+      </div>
+      <div className={toggle === 2 ? "show-tl-content" : "tl-content"}>
         <TimelineComponent2 />
       </div>
     </div>

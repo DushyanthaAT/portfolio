@@ -50,4 +50,30 @@
             }
         }
     }
+    .expEdu{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        .tab-container{
+        margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap:70px;
+            .edu-tab, .exp-tab{
+                &:hover{
+                    color:white
+                }
+                color:#8C8D8F;
+            }
+            .show-edu-tab, .show-exp-tab{
+                color: white;
+            }
+        }
+    }
+    .tl-content{
+        display: none;
+    }
+    .show-tl-content{
+        display: block;
+    }   
 }
