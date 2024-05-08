@@ -8,6 +8,8 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaDribbble } from "react-icons/fa";
+import TimelineComponent from "../timelineComponent/TimelineComponent";
+import TimelineComponent2 from "../timelineComponent/timelineComponent2";
 
 const About = () => {
   return (
@@ -61,7 +63,9 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="expEdu"></div>
+      <div className="expEdu">
+        <TimelineComponent2 />
+      </div>
     </div>
   );
 };

@@ -16,6 +16,12 @@ import nodeJs from "./icons/nodeJs.png";
 import python from "./icons/python.png";
 import react from "./icons/react.png";
 import xd from "./icons/xd.png";
+import VCK from "./VCK.jpg";
+import SUSL from "./SUSL.jpg";
+import YP from "./YP.jpg";
+import SIGHT from "./SIGHT.jpg";
+import SLSAC from "./SLSAC.jpg";
+import IEEESUSL from "./IEEESUSL.jpg";
 
 export {
   profileImage,
@@ -36,4 +42,10 @@ export {
   python,
   react,
   xd,
+  VCK,
+  SUSL,
+  YP,
+  SIGHT,
+  SLSAC,
+  IEEESUSL,
 };
