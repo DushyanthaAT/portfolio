@@ -1,9 +1,13 @@
 :root{
     --bgColor:#202733;
-    --priColor:#090101;
+    --priColor:#090101; 
+    --secColor:#2A2A2A;
+    --appBlue:#00adf2;
     --textCol1:#ffffff;
     --textCol2: #c9cbce;
     --textCol3: #949699;
+   
+    
 
 }
 
