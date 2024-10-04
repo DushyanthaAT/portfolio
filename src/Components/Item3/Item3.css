@@ -1,0 +1,11 @@
+.item-3{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--priColor);
+    border-radius: 25px;
+    justify-content: center;
+    padding: 40px;
+    align-items: start;
+    overflow: hidden;
+    width: auto;
+}
