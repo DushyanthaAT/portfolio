@@ -22,6 +22,7 @@ import YP from "./YP.jpg";
 import SIGHT from "./SIGHT.jpg";
 import SLSAC from "./SLSAC.jpg";
 import IEEESUSL from "./IEEESUSL.jpg";
+import webSite from "./webSite.jpg";
 
 export {
   profileImage,
@@ -48,4 +49,5 @@ export {
   SIGHT,
   SLSAC,
   IEEESUSL,
+  webSite,
 };
