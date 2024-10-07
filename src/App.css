@@ -24,3 +24,7 @@
 body{
     background-color: var(--bgColor);
 }
+
+.App{
+    width: 100vw;
+}
