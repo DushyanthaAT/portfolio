@@ -1,5 +1,7 @@
 import React from "react";
+import "../../Pages/responsive.css";
 import "./icons.css";
+
 
 const Icons = ({ ImgURL, Name }) => {
   return (
