@@ -1,16 +1,8 @@
 import React from "react";
 import "./cardComponent.css";
 
-const CardComponent = ({
-  iconImages,
-  ImgURL,
-  Title,
-  Desc,
-  BeURL,
-  GitURL,
-  FigURL,
-}) => {
-  const icons = Array.isArray(iconImages) ? iconImages : [];
+const CardComponent = ({ item }) => {
+  const icons = Array.isArray(item.iconImages) ? item.iconImages : [];
   return (
     <div className="ProContainer">
       <div className="Cflex1">
@@ -30,18 +22,18 @@ const CardComponent = ({
         </div>
       </div>
       <div className="Cflex2">
-        <img src={ImgURL} alt="" />
+        <img src={item.imageurl} alt="sd" />
       </div>
       <div className="Cflex3">
-        <span className="ProTitle">{Title}</span>
-        <span className="ProDescription">{Desc}</span>
+        <span className="ProTitle">{item.title}</span>
+        <span className="ProDescription">{item.desc}</span>
       </div>
       <div className="Cflex4">
         <div className="button">
           <div
             className="btn-icon"
             onClick={() => {
-              window.open(BeURL, "_blank");
+              window.open(item.beUrl, "_blank");
             }}
           >
             <div className="icon">
@@ -55,7 +47,7 @@ const CardComponent = ({
           <div
             className="btn-icon"
             onClick={() => {
-              window.open(GitURL, "_blank");
+              window.open(item.gitUrl, "_blank");
             }}
           >
             <div className="icon">
@@ -69,7 +61,7 @@ const CardComponent = ({
           <div
             className="btn-icon"
             onClick={() => {
-              window.open(FigURL, "_blank");
+              window.open(item.figUrl, "_blank");
             }}
           >
             <div className="icon">
