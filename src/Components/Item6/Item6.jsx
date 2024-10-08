@@ -32,27 +32,27 @@ const Item6 = () => {
         </div>
         <div className="exp-right">
           <div className="exp-right-flex1">
-            <Icons ImgURL={html} Name="HTML" />
-            <Icons ImgURL={css} Name="CSS" />
-            <Icons ImgURL={js} Name="JavaScript" />
-            <Icons ImgURL={c} Name="C" />
-            <Icons ImgURL={java} Name="Java" />
-            <Icons ImgURL={python} Name="Python" />
+            <Icons ImgURL={html} Name="HTML" className="exp-icon" />
+            <Icons ImgURL={css} Name="CSS" className="exp-icon" />
+            <Icons ImgURL={js} Name="JavaScript" className="exp-icon" />
+            <Icons ImgURL={c} Name="C" className="exp-icon" />
+            <Icons ImgURL={java} Name="Java" className="exp-icon" />
+            <Icons ImgURL={python} Name="Python" className="exp-icon" />
           </div>
           <div className="exp-right-flex2">
-            <Icons ImgURL={nodeJs} Name="NodeJs" />
-            <Icons ImgURL={react} Name="React" />
-            <Icons ImgURL={flutter} Name="Flutter" />
-            <Icons ImgURL={boostrap} Name="Boostrap" />
-            <Icons ImgURL={firebase} Name="Firebase" />
+            <Icons ImgURL={nodeJs} Name="NodeJs" className="exp-icon" />
+            <Icons ImgURL={react} Name="React" className="exp-icon" />
+            <Icons ImgURL={flutter} Name="Flutter" className="exp-icon" />
+            <Icons ImgURL={boostrap} Name="Boostrap" className="exp-icon" />
+            <Icons ImgURL={firebase} Name="Firebase" className="exp-icon" />
           </div>
           <div className="exp-right-flex3">
-            <Icons ImgURL={mongoDB} Name="MongoDB" />
-            <Icons ImgURL={mySQL} Name="My SQL" />
-            <Icons ImgURL={git} Name="Git" />
-            <Icons ImgURL={github} Name="Github" />
-            <Icons ImgURL={xd} Name="XD" />
-            <Icons ImgURL={figma} Name="Figma" />
+            <Icons ImgURL={mongoDB} Name="MongoDB" className="exp-icon" />
+            <Icons ImgURL={mySQL} Name="My SQL" className="exp-icon" />
+            <Icons ImgURL={git} Name="Git" className="exp-icon" />
+            <Icons ImgURL={github} Name="Github" className="exp-icon" />
+            <Icons ImgURL={xd} Name="XD" className="exp-icon" />
+            <Icons ImgURL={figma} Name="Figma" className="exp-icon" />
           </div>
         </div>
       </div>
