@@ -15,3 +15,12 @@
         
     }
 }
+
+@media (max-width:900px) {
+    .icon-container{
+        .icon-image{
+            width: 35px;
+        }
+    }
+    
+}
