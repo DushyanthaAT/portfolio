@@ -9,7 +9,7 @@ function Image_Slider() {
   var settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -25,6 +25,20 @@ function Image_Slider() {
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
+    responsive: [
+      {
+        breakpoint: 1300, // Adjust for medium screens (e.g., tablets)
+        settings: {
+          slidesToShow: 2, // Show 2 slides on medium screens
+        },
+      },
+      {
+        breakpoint: 900, // Adjust for small screens (e.g., mobile)
+        settings: {
+          slidesToShow: 1, // Show 1 slide on small screens
+        },
+      },
+    ],
   };
   const img_data = [
     {
