@@ -1,19 +1,26 @@
 .cer-container{
     text-align: center;
     background-color: var(--secColor);
-    height: 250px;
+    height: 350px;
     overflow: hidden;
     border-radius: 30px;
+    aspect-ratio: 1/1;
+    display: flex;
     .cer-img{
         background-color:  var(--secColor);
         width: 100%;
         padding: 10px;
+        flex-direction: column;
+        flex:3;
         img{
             width: calc(100% - 20px);
-            height: 200px;
             border-radius: 15px;
         }
+        
     }
+    .cer-title{
+            flex:1; 
+        }
 }
 .slick-slide > div {
     margin:0px 20px;
