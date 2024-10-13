@@ -18,6 +18,6 @@
 
 @media (max-width:900px) {
     .imgSlider{
-        max-width: 300px;
+        width:20%;
     }
 }
