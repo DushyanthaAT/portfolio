@@ -34,7 +34,9 @@ const Item10 = () => {
   return (
     <div className="contact-container">
       <div className="left-flex">
-        <span className="txt1">Contact me</span>
+        <div className="text-wrapper-cot">
+          <span className="txt1">Contact me</span>
+        </div>
         <div className="left-wrapper">
           {/* phone */}
           <div className="cinfo-container">
