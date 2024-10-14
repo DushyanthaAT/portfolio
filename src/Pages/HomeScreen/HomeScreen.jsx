@@ -34,6 +34,7 @@ import Item9 from "../../Components/Item9/Item9";
 import Item10 from "../../Components/Item10/Item10";
 import Item11 from "../../Components/Item11/Item11";
 import "../responsive.css";
+import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
 
 const HomeScreen = () => {
   const cardData = [
@@ -50,6 +51,9 @@ const HomeScreen = () => {
   ];
   return (
     <div className="document">
+      <div className="bottomNav">
+        <BottomNavMobile />
+      </div>
       <div className="doc-wrapper">
         <div className="sideNav">
           <SideNav />
