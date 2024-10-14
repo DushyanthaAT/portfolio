@@ -157,10 +157,70 @@
             border-radius: 20px !important;
         }
     }
+    .container2{
+        gap: 35px!important;
+
+    }
+
+    /*>>>>Item 11<<<<*/
+    .por-container{
+        padding: 30px 0px;
+        height: auto!important;
+    }
 }
 
 @media (max-width:640px) {
     .expertise-container{
         flex-direction: column;
+    }
+    /*>>>>>About me<<<<<*/
+    .about-container>.about-me>.container2{
+        flex-direction: column;
+        gap: 10px!important;
+        justify-content: center!important;
+        align-items: center!important;
+        text-align: center;
+    }
+    .about-me>.container2>.amRight{
+        justify-content: center!important;
+        align-items: center!important;
+    }
+    .expEdu{
+        align-items: center!important;
+    }
+
+
+    /*>>>>Education and Volunteering<<<<*/
+    .tltxt1{
+        font-size: 0.9rem!important;
+    }
+    
+    .tltxt2{
+        font-size: 0.6rem!important;
+    }
+    
+    .tldate{
+        display: flex;
+        align-items: center;
+        .tltxt2{
+            margin-bottom: 0;
+            margin-left: 3px;
+            color: var(--textCol1);
+        }
+    }
+
+    /*>>>> protfolio<<<< */
+    .work_filter{
+        font-size: 0.9rem!important;
+        gap: 0.1px!important;
+    }
+
+    /*>>>> contact me<<<<*/
+    .contact-container{
+        flex-direction: column!important;
+    }
+    .text-wrapper-cot{
+        display: flex;
+        justify-content: center!important;
     }
 }
