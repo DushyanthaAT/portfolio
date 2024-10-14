@@ -76,10 +76,13 @@ const Item7 = () => {
             <Button
               className={toggle === 1 ? "show-edu-tab" : "edu-tab"}
               startIcon={<SchoolOutlinedIcon />}
-              sx={{
+              sx={(theme) => ({
                 textTransform: "none",
                 fontSize: "1.2rem",
-              }}
+                [theme.breakpoints.down("640")]: {
+                  fontSize: "1rem",
+                },
+              })}
               disableTouchRipple
               onClick={() => updateToggle(1)}
             >
@@ -90,11 +93,13 @@ const Item7 = () => {
             <Button
               className={toggle === 2 ? "show-exp-tab" : "exp-tab"}
               startIcon={<WorkOutlineOutlinedIcon />}
-              sx={{
+              sx={(theme) => ({
                 textTransform: "none",
-                // color: "#8C8D8F",
                 fontSize: "1.2rem",
-              }}
+                [theme.breakpoints.down("640")]: {
+                  fontSize: "1rem",
+                },
+              })}
               disableTouchRipple
               onClick={() => updateToggle(2)}
             >
