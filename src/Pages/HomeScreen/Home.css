@@ -1,7 +1,6 @@
 .document{
     display: flex;
     height: 100vh;
-    justify-content: center;
     background-color: #1C1F21;
 }
 
@@ -26,7 +25,7 @@
         display: grid;
         max-width: 1920px;
         grid-template-columns: repeat(4,minmax(150px,1fr));
-        grid-template-rows: 300px 300px 350px auto auto auto auto auto auto;
+        grid-template-rows: 300px 300px 350px auto auto auto auto auto auto auto;
         grid-gap: 20px;
     }
 
@@ -80,6 +79,7 @@
         grid-column: 1/4;
         width: 4fr;
         max-width: 4fr;
+        padding: 30px 0px;
         
     }
     .item-11{
@@ -125,4 +125,15 @@
 .rightarea-heading{
     font-size: 2rem;
     font-weight: 600;
+}
+
+
+.document>.bottomNav{
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
