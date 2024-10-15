@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { GoHome } from "react-icons/go";
 import { BiGitRepoForked } from "react-icons/bi";
 import { PiCertificate } from "react-icons/pi";
@@ -9,6 +9,39 @@ import "./SideNav.css";
 import "../../Pages/responsive.css";
 
 const SideNav = () => {
+  const [selectedItem, setSelectedItem] = useState("home");
+
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setSelectedItem(id);
+  };
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("div[id]"); // Select all divs with IDs
+    const options = {
+      root: null, // Use the viewport as the root
+      threshold: 0.5, // Trigger when 50% of the section is in view
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setSelectedItem(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, options);
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   return (
     <div className="sideNav">
       <div className="profile">
@@ -21,25 +54,44 @@ const SideNav = () => {
       </div>
       <div className="sideMenu-Items">
         <ul>
-          <li className="home">
+          <li
+            className={`home ${selectedItem === "home" ? "active" : ""}`}
+            onClick={() => handleScroll("home")}
+          >
             <GoHome style={{ color: "var(--textCol2)" }} />
-            <span className="list-text">HOME</span>
+            <span className="list-text">Home</span>
           </li>
-          <li className="projects">
-            <BiGitRepoForked style={{ color: "var(--textCol2)" }} />
-            <span className="list-text">PROJECTS</span>
-          </li>
-          <li className="certificates">
-            <PiCertificate style={{ color: "var(--textCol2)" }} />
-            <span className="list-text">CERTIFICATES</span>
-          </li>
-          <li className="about">
+          <li
+            className={`about ${selectedItem === "about" ? "active" : ""}`}
+            onClick={() => handleScroll("about")}
+          >
             <BsInfoCircle style={{ color: "var(--textCol2)" }} />
-            <span className="list-text">ABOUT</span>
+            <span className="list-text">About</span>
           </li>
-          <li className="contact">
+          <li
+            className={`projects ${
+              selectedItem === "portfolio" ? "active" : ""
+            }`}
+            onClick={() => handleScroll("portfolio")}
+          >
+            <BiGitRepoForked style={{ color: "var(--textCol2)" }} />
+            <span className="list-text">Portfolio</span>
+          </li>
+          <li
+            className={`certificates ${
+              selectedItem === "winnings" ? "active" : ""
+            }`}
+            onClick={() => handleScroll("winnings")}
+          >
+            <PiCertificate style={{ color: "var(--textCol2)" }} />
+            <span className="list-text">Winnings</span>
+          </li>
+          <li
+            className={`contact ${selectedItem === "contacts" ? "active" : ""}`}
+            onClick={() => handleScroll("contacts")}
+          >
             <LuMessagesSquare style={{ color: "var(--textCol2)" }} />
-            <span className="list-text">CONTACT</span>
+            <span className="list-text">Contacts</span>
           </li>
         </ul>
       </div>
