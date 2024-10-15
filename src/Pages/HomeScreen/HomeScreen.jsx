@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import {
   profileImage,
@@ -38,6 +38,16 @@ import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
 import { Typewriter } from "react-simple-typewriter";
 
 const HomeScreen = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    const { target } = e;
+    const { left, top } = target.getBoundingClientRect(); // Use getBoundingClientRect for better precision
+    setMousePosition({
+      x: e.clientX - left,
+      y: e.clientY - top,
+    });
+  };
   const cardData = [
     {
       iconImages: [html, css, js],
@@ -90,28 +100,95 @@ const HomeScreen = () => {
             </span>
           </span>
           <div className="grid-container">
-            <div className="item-1">
+            <div
+              className="item-1 item-hover"
+              onMouseMove={handleMouseMove}
+              style={{
+                "--x": `${mousePosition.x}px`,
+                "--y": `${mousePosition.y}px`,
+                "--clr": "#00adf2",
+              }}
+            >
               <Item1 />
             </div>
-            <div className="item-2">
+            <div
+              className="item-2 item-hover"
+              onMouseMove={handleMouseMove}
+              style={{
+                "--x": `${mousePosition.x}px`,
+                "--y": `${mousePosition.y}px`,
+                "--clr": "#00adf2",
+              }}
+            >
               <Item2 />
             </div>
-            <div className="item-3">
+            <div
+              className="item-3 item-hover"
+              onMouseMove={handleMouseMove}
+              style={{
+                "--x": `${mousePosition.x}px`,
+                "--y": `${mousePosition.y}px`,
+                "--clr": "#00adf2",
+              }}
+            >
               <Item3 />
             </div>
-            <div className="item-4">
+            <div
+              className="item-4 item-hover"
+              onMouseMove={handleMouseMove}
+              style={{
+                "--x": `${mousePosition.x}px`,
+                "--y": `${mousePosition.y}px`,
+                "--clr": "#00adf2",
+              }}
+            >
               <Item4 />
             </div>
-            <div className="item-5">
+            <div
+              className="item-5 item-hover"
+              onMouseMove={handleMouseMove}
+              style={{
+                "--x": `${mousePosition.x}px`,
+                "--y": `${mousePosition.y}px`,
+                "--clr": "#00adf2",
+              }}
+            >
               <Item5 />
             </div>
-            <div id="home" className="item-6">
+            <div
+              id="home"
+              className="item-6 item-hover"
+              onMouseMove={handleMouseMove}
+              style={{
+                "--x": `${mousePosition.x}px`,
+                "--y": `${mousePosition.y}px`,
+                "--clr": "#00adf2",
+              }}
+            >
               <Item6 />
             </div>
-            <div id="about" className="item-7">
+            <div
+              id="about"
+              className="item-7 item-hover"
+              onMouseMove={handleMouseMove}
+              style={{
+                "--x": `${mousePosition.x}px`,
+                "--y": `${mousePosition.y}px`,
+                "--clr": "#00adf2",
+              }}
+            >
               <Item7 />
             </div>
-            <div id="portfolio" className="item-8">
+            <div
+              id="portfolio"
+              className="item-8 item-hover"
+              onMouseMove={handleMouseMove}
+              style={{
+                "--x": `${mousePosition.x}px`,
+                "--y": `${mousePosition.y}px`,
+                "--clr": "#00adf2",
+              }}
+            >
               <Item8 />
             </div>
             <div id="winnings" className="item-9">
