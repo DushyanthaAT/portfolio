@@ -1,9 +1,11 @@
 .bottom-nav {
+    display: none;
+    visibility: hidden;
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 350px;
     height: 60px;
     background: rgba(0, 0, 50, 0.4); /* Transparent blue-black mix */
     backdrop-filter: blur(12px); /* Glass effect */
@@ -39,4 +41,15 @@
   .bottom-nav svg {
     font-size: 24px;
   }
+  
+  .nav-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-item.active {
+    color: white; /* Change text color on active */
+  }
+  
   
