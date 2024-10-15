@@ -5,6 +5,10 @@
     max-width: inherit;
     align-items: center;
     overflow: hidden;
+    
+    
+    position: relative;
+    z-index: 2;
     .about-me{
         display: flex;
         flex-direction: column;
