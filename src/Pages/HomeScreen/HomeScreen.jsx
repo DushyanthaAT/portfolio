@@ -36,7 +36,6 @@ import Item11 from "../../Components/Item11/Item11";
 import "../responsive.css";
 import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
 import { Typewriter } from "react-simple-typewriter";
-import { EvervaultCard } from "../../Components/UI/evervault-card";
 
 const HomeScreen = () => {
   const cardData = [
@@ -51,7 +50,6 @@ const HomeScreen = () => {
       Category: "web",
     },
   ];
-
   return (
     <div className="document">
       <div className="bottomNav">
