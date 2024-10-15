@@ -1,12 +1,15 @@
-.item-1{
+.item-1in{
     display: flex;
     flex-direction: column;
-    background-color: var(--priColor);
+    /* background: var(--priColor); */
     border-radius: 25px;
     justify-content: center;
     align-items: center;
-    width: auto;
     height: 100%;
+    width:auto; 
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
     .num{
         font-size: 2.5rem;
     }
@@ -16,3 +19,7 @@
 
     }
 }
+
+ 
+
+  

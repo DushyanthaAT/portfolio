@@ -98,7 +98,7 @@ const Item8 = () => {
     setActive(index);
   };
   return (
-    <div className="item item-8">
+    <div className="item item-8in">
       <div className="portfolio-container">
         <div className="portfolio-header">
           <div className="txt1">Portfolio</div>

@@ -6,7 +6,7 @@ import "./Item5.css";
 
 const Item5 = () => {
   return (
-    <div className="item item-5">
+    <div className="item item-5in">
       <div className="icons">
         <IoDocumentTextOutline />
       </div>

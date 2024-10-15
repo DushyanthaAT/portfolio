@@ -3,7 +3,7 @@ import "./Item3.css";
 
 const Item3 = () => {
   return (
-    <div className="item item-3">
+    <div className="item item-3in">
       <span className="txt1">I am</span>
       <span className="txt2">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae

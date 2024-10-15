@@ -1,11 +1,15 @@
-.item-3{
+.item-3in{
     display: flex;
     flex-direction: column;
-    background-color: var(--priColor);
+    /* background-color: var(--priColor); */
     border-radius: 25px;
     justify-content: center;
     padding: 40px;
     align-items: start;
     overflow: hidden;
     width: auto;
+    
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
 }

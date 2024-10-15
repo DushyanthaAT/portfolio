@@ -1,10 +1,14 @@
-.item-2{
+.item-2in{
     display: flex;
     flex-direction: column;
-    background-color: var(--priColor);
+    /* background-color: var(--priColor); */
     border-radius: 25px;
     justify-content: center;
     align-items: center;
     width: auto;
     height: 100%;
+    
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
 }

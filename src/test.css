@@ -1,0 +1,43 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:3rem;
+}
+
+.box{
+    height: 300px;
+    width:300px;
+    background: rgba(255,255,255,0.2); 
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    top:var(--y);
+    left: var(--x);
+    width: 650px;
+    height: 650px;
+    transform: translate(-50%, -50%);
+    background:radial-gradient(var(--clr),transparent,transparent) ;
+    opacity: 0;
+    transition: .5s, top 0s, left 0s;
+}
+
+
+.box:hover::before{
+    opacity: 1;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 2px; /* This is shorthand for top, right, bottom, left */
+    border-radius: 18px;
+    background: rgba(45, 45, 45, 0.75); /* 'O' should be removed, and the opacity should be 0.75 */
+  }
+  

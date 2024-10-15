@@ -4,7 +4,7 @@ import { IoMdCheckboxOutline } from "react-icons/io";
 
 const Item4 = () => {
   return (
-    <div className="item item-4">
+    <div className="item item-4in">
       <div className="icons">
         <IoMdCheckboxOutline />
       </div>
