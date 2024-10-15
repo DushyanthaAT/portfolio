@@ -24,7 +24,7 @@ import "./Item6.css";
 
 const Item6 = () => {
   return (
-    <div className="item item-6">
+    <div className="item item-6in">
       <div className="expertise-container">
         <div className="exp-left">
           <div className="txt1">Expertise</div>
