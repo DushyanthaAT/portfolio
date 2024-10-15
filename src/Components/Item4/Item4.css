@@ -8,3 +8,15 @@
     width: auto;
     height: 100%;
 }
+
+.status{
+    display: flex;
+    gap: 0.1rem;
+    align-items: center;
+}
+
+iframe{
+    border: 0px;
+    width: 30px;
+    height: 30px;
+}
