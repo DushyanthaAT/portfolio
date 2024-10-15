@@ -35,6 +35,8 @@ import Item10 from "../../Components/Item10/Item10";
 import Item11 from "../../Components/Item11/Item11";
 import "../responsive.css";
 import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
+import { Typewriter } from "react-simple-typewriter";
+import { EvervaultCard } from "../../Components/UI/evervault-card";
 
 const HomeScreen = () => {
   const cardData = [
@@ -49,6 +51,7 @@ const HomeScreen = () => {
       Category: "web",
     },
   ];
+
   return (
     <div className="document">
       <div className="bottomNav">
@@ -59,7 +62,35 @@ const HomeScreen = () => {
           <SideNav />
         </div>
         <div className="rightArea">
-          <span className="rightarea-heading">I'm a Front End Developer</span>
+          <span id="home" className="rightarea-heading">
+            <span
+              style={{
+                paddingTop: "5rem",
+                paddingBottom: "20rem",
+                margin: "auto 0",
+                fontWeight: "normal",
+                fontSize: "clamp(1.2rem, 5vw, 2rem)",
+              }}
+            >
+              I am a{" "}
+              <span style={{ color: "#00adf2", fontWeight: "bold" }}>
+                {/* Style will be inherited from the parent element */}
+                <Typewriter
+                  words={[
+                    "Full Stack Developer",
+                    "UI/UX Engineer",
+                    "Graphic Designer",
+                  ]}
+                  loop={Infinity}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </span>
+            </span>
+          </span>
           <div className="grid-container">
             <div className="item-1">
               <Item1 />
@@ -76,19 +107,19 @@ const HomeScreen = () => {
             <div className="item-5">
               <Item5 />
             </div>
-            <div className="item-6">
+            <div id="home" className="item-6">
               <Item6 />
             </div>
-            <div className="item-7">
+            <div id="about" className="item-7">
               <Item7 />
             </div>
-            <div className="item-8">
+            <div id="portfolio" className="item-8">
               <Item8 />
             </div>
-            <div className="item-9">
+            <div id="winnings" className="item-9">
               <Item9 />
             </div>
-            <div className="item-10">
+            <div id="contacts" className="item-10">
               <Item10 />
             </div>
             <div className="item-11">
