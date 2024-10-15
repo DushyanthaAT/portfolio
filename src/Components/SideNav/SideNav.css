@@ -53,3 +53,23 @@
     }
     
 }
+
+
+li.active {
+    background-color: #a7abfb6f; /* Highlight color */
+    color: white; /* Text color when active */
+  }
+  
+  .sideMenu-Items ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .sideMenu-Items ul li:hover {
+    background-color: #e0e0e0; /* Hover effect */
+  }
+  
+  .sideMenu-Items ul li.active .list-text {
+    font-weight: bold; /* text bold */
+  }
