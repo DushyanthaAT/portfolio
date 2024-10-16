@@ -11,8 +11,8 @@
 }
 
 .rightArea{
-    background: #1C1F21;
-    background: radial-gradient(circle, rgba(25,85,157,1) 0%, rgba(28,31,33,1) 49%);
+    /* background: #1C1F21;
+    background: radial-gradient(circle, rgba(25,85,157,1) 0%, rgba(28,31,33,1) 49%); */
     flex:4;
     color:var(--textCol1);
     height: auto;
@@ -39,14 +39,14 @@
         border-radius: 20px;
         position: relative;
         overflow: hidden;
-        background: var(--priColor);
+        background: var(--priGrd);
     }
     .item-2{
         grid-column: 2/3;
         border-radius: 20px;
         position: relative;
         overflow: hidden;
-        background: var(--priColor);
+        background: var(--priGrd);
        
     }
     .item-3{
@@ -56,7 +56,7 @@
         border-radius: 20px;
         position: relative;
         overflow: hidden;
-        background: var(--priColor);
+        background: var(--priGrd);
         justify-content: center!important;
         align-items: center!important;
     }
@@ -65,14 +65,14 @@
         border-radius: 20px;
         position: relative;
         overflow: hidden;
-        background: var(--priColor);
+        background: var(--priGrd);
     }
     .item-5{
         grid-column: 2/3;
         border-radius: 20px;
         position: relative;
         overflow: hidden;
-        background: var(--priColor);
+        background: var(--priGrd);
     }
     .item-6{
         padding: 20px 0px;
@@ -80,15 +80,14 @@
         border-radius: 20px;
         position: relative;
         overflow: hidden;
-        background: var(--priColor);
+        background: var(--priGrd);
     }
     .item-7{
         display: flex;
         border-radius: 20px;
         position: relative;
         overflow: hidden;
-        background: var(--priColor);
-        border-radius: 25px;
+        background: var(--priGrd);
         grid-column: 1/5;
         width: 4fr;
         max-width: 4fr;
@@ -103,17 +102,21 @@
         border-radius: 20px;
         position: relative;
         overflow: hidden;
-        background: var(--priColor);
+        background: var(--priGrd);
         
     }
     .item-9{
         grid-column: 1/5;
         width: 4fr;
         max-width: 4fr;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        background: var(--priGrd);
     }
     .item-10{
-        background-color: var(--priColor);
-        border-radius: 25px;
+        background: var(--priGrd);
+        border-radius: 20px;
         grid-column: 1/4;
         width: 4fr;
         max-width: 4fr;
@@ -121,8 +124,8 @@
         
     }
     .item-11{
-        background-color: var(--priColor);
-        border-radius: 25px;
+        background: var(--priGrd);
+        border-radius: 20px;
         grid-column: 4/5;
         width: 4fr;
         max-width: 4fr; 
@@ -170,14 +173,11 @@
 
 
 .item-hover {
-    position: relative; /* Ensure the parent has relative positioning */
-    overflow: hidden; /* Prevent overflow of the hover effect */
-    transition: background-color 0.3s; /* Add transition for the background color */
+    position: relative;
+    overflow: hidden; 
+    transition: background-color 0.3s; 
 }
 
-.item-hover:hover::after {
-    opacity: 0.85; /* This can help ensure smooth visibility changes */
-}
 .item-hover::before{
     content: '';
     position: absolute;
@@ -201,8 +201,8 @@
     position: absolute;
     inset: 2px; 
     border-radius: 18px;
-    background:var(--priColor);
-    opacity: 0.85; 
+    background:var(--priColorLight);
+    opacity: 0.9; 
     z-index: 0;
     transition: opacity 10s; 
   } 
