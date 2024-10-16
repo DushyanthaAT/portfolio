@@ -12,3 +12,7 @@
     z-index: 2;
     pointer-events: none;
 }
+
+.btn-cont{
+    pointer-events: auto;
+}
