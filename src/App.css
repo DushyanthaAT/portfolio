@@ -1,16 +1,18 @@
 :root{
     --bgColor:#202733;
-    --priColor:#090101; 
+    --priColor:#090101;
+    --priColorLight:#000000; 
     --secColor:#2A2A2A;
     --appBlue:#00adf2;
     --textCol1:#ffffff;
     --textCol2: #c9cbce;
     --textCol3: #949699;
     --clr: #3498db;
-   
+    --priGrd:linear-gradient(315deg, #bababa15 0%, rgba(114, 114, 114, 0.195) 74%);
     
-
 }
+
+
 
 *{
     margin: 0;
@@ -29,3 +31,24 @@ body{
 .App{
     width: 100vw;
 }
+
+/* For WebKit browsers */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For a specific element */
+  .element::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for all browsers */
+  body {
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;     /* For Firefox */
+  }
+  
+  .element {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
