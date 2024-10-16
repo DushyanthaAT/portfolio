@@ -1,6 +1,8 @@
 .contact-container {
     display: flex;
     width: 100%;
+    position: relative;
+    z-index: 2;
     .left-flex {
       .left-wrapper {
         display: flex;
