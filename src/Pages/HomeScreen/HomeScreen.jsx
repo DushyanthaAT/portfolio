@@ -36,30 +36,19 @@ import Item11 from "../../Components/Item11/Item11";
 import "../responsive.css";
 import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
 import { Typewriter } from "react-simple-typewriter";
+import "./homebg.css";
 
 const HomeScreen = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
   const handleMouseMove = (e) => {
-    const { target } = e;
-    const { left, top } = target.getBoundingClientRect(); // Use getBoundingClientRect for better precision
-    setMousePosition({
-      x: e.clientX - left,
-      y: e.clientY - top,
-    });
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Update the item's style variables directly
+    e.currentTarget.style.setProperty("--x", `${x}px`);
+    e.currentTarget.style.setProperty("--y", `${y}px`);
   };
-  const cardData = [
-    {
-      iconImages: [html, css, js],
-      imageurl: webSite,
-      title: "TestTitle",
-      desc: "Lorem ipsum dolor sit amet consectetur adipi",
-      beUrl: "https://www.behance.com",
-      gitUrl: "https://www.github.com",
-      figUrl: "https://www.figma.com",
-      Category: "web",
-    },
-  ];
+
   return (
     <div className="document">
       <div className="bottomNav">
@@ -70,6 +59,9 @@ const HomeScreen = () => {
           <SideNav />
         </div>
         <div className="rightArea">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          {/* <div id="stars3"></div> */}
           <span id="home" className="rightarea-heading">
             <span
               style={{
@@ -82,7 +74,6 @@ const HomeScreen = () => {
             >
               I am a{" "}
               <span style={{ color: "#00adf2", fontWeight: "bold" }}>
-                {/* Style will be inherited from the parent element */}
                 <Typewriter
                   words={[
                     "Full Stack Developer",
@@ -100,106 +91,33 @@ const HomeScreen = () => {
             </span>
           </span>
           <div className="grid-container">
-            <div
-              className="item-1 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item1 />
-            </div>
-            <div
-              className="item-2 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item2 />
-            </div>
-            <div
-              className="item-3 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item3 />
-            </div>
-            <div
-              className="item-4 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item4 />
-            </div>
-            <div
-              className="item-5 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item5 />
-            </div>
-            <div
-              id="home"
-              className="item-6 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item6 />
-            </div>
-            <div
-              id="about"
-              className="item-7 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item7 />
-            </div>
-            <div
-              id="portfolio"
-              className="item-8 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item8 />
-            </div>
-            <div id="winnings" className="item-9">
-              <Item9 />
-            </div>
-            <div id="contacts" className="item-10">
-              <Item10 />
-            </div>
-            <div className="item-11">
-              <Item11 />
-            </div>
+            {/* Create a mapping for items to avoid repetition */}
+            {[
+              { Component: Item1, id: "home" },
+              { Component: Item2, id: "home" },
+              { Component: Item3, id: "iam" },
+              { Component: Item4, id: "status" },
+              { Component: Item5, id: "home" },
+              { Component: Item6, id: "home" },
+              { Component: Item7, id: "about" },
+              { Component: Item8, id: "portfolio" },
+              { Component: Item9, id: "winnings" },
+              { Component: Item10, id: "contacts" },
+              { Component: Item11, id: "contacts" },
+              // Add the rest of your items with corresponding IDs
+            ].map(({ Component, id }, index) => (
+              <div
+                key={index}
+                id={id} // Set the ID for scrolling
+                className={`item-${index + 1} item-hover`}
+                onMouseMove={handleMouseMove}
+                style={{
+                  "--clr": "#00adf2",
+                }}
+              >
+                <Component />
+              </div>
+            ))}
           </div>
         </div>
       </div>
