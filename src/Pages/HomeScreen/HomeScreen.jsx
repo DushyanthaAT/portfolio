@@ -1,26 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
-import {
-  profileImage,
-  boostrap,
-  c,
-  css,
-  figma,
-  firebase,
-  flutter,
-  git,
-  github,
-  html,
-  java,
-  js,
-  mongoDB,
-  mySQL,
-  nodeJs,
-  python,
-  react,
-  xd,
-  webSite,
-} from "../../images";
 import SideNav from "../../Components/SideNav/SideNav";
 import Item1 from "../../Components/Item1/Item1";
 import Item2 from "../../Components/Item2/Item2";
@@ -44,7 +23,6 @@ const HomeScreen = () => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Update the item's style variables directly
     e.currentTarget.style.setProperty("--x", `${x}px`);
     e.currentTarget.style.setProperty("--y", `${y}px`);
   };
@@ -61,7 +39,6 @@ const HomeScreen = () => {
         <div className="rightArea">
           <div id="stars"></div>
           <div id="stars2"></div>
-          {/* <div id="stars3"></div> */}
           <span id="home" className="rightarea-heading">
             <span
               style={{
@@ -91,7 +68,6 @@ const HomeScreen = () => {
             </span>
           </span>
           <div className="grid-container">
-            {/* Create a mapping for items to avoid repetition */}
             {[
               { Component: Item1, id: "home" },
               { Component: Item2, id: "home" },
@@ -104,11 +80,10 @@ const HomeScreen = () => {
               { Component: Item9, id: "winnings" },
               { Component: Item10, id: "contacts" },
               { Component: Item11, id: "contacts" },
-              // Add the rest of your items with corresponding IDs
             ].map(({ Component, id }, index) => (
               <div
                 key={index}
-                id={id} // Set the ID for scrolling
+                id={id}
                 className={`item-${index + 1} item-hover`}
                 onMouseMove={handleMouseMove}
                 style={{
