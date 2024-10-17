@@ -22,8 +22,8 @@ import {
   xd,
   webSite,
 } from "../../images";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+import Tilty from "react-tilty";
 
 const Item8 = () => {
   const cardData = [
@@ -205,7 +205,11 @@ const Item8 = () => {
         </div>
         <div className="portfolio-items">
           {projects.slice(0, showAll ? projects.length : 3).map((item) => {
-            return <CardComponent item={item} key={item.id} />;
+            return (
+              <Tilty key={item.id} max={8}>
+                <CardComponent item={item} />
+              </Tilty>
+            );
           })}
         </div>
         <div className="show-more-container">
