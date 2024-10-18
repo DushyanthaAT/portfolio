@@ -1,7 +1,7 @@
 .ProContainer{
     display: flex;
     flex-direction: column;
-    width: calc(100% - 40px);
+    width: auto;
     /* max-width: 100%; */
     height: auto;
     border-radius: 24px;
