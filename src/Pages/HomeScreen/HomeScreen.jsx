@@ -37,8 +37,8 @@ const HomeScreen = () => {
       const batch = ScrollTrigger.batch(".grid-cards", {
         duration: 1,
         start: "top 90%",
-        end: "bottom 10%",
-        markers: true,
+        end: "bottom 8%",
+        // markers: true,
         onEnter: (batch) =>
           gsap.fromTo(
             batch,
@@ -157,6 +157,11 @@ const HomeScreen = () => {
                 <Component />
               </div>
             ))}
+          </div>
+          <div className="web-footer">
+            <span className="footer-txt">
+              © 2024 Dushyantha Thilakarathna. All Rights Reserved.
+            </span>
           </div>
         </div>
       </div>
