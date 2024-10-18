@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import SideNav from "../../Components/SideNav/SideNav";
 import Item1 from "../../Components/Item1/Item1";
@@ -16,8 +16,70 @@ import "../responsive.css";
 import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
 import { Typewriter } from "react-simple-typewriter";
 import "./homebg.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HomeScreen = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const gridContainerRef = useRef(null);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoaded(true);
+    }, 500);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (isLoaded) {
+      const batch = ScrollTrigger.batch(".grid-cards", {
+        duration: 1,
+        start: "top 90%",
+        end: "bottom 10%",
+        markers: true,
+        onEnter: (batch) =>
+          gsap.fromTo(
+            batch,
+            { opacity: 0, y: 100 },
+            { opacity: 1, y: 0, stagger: 0.15 }
+          ),
+        onEnterBack: (batch) =>
+          gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+        onLeave: (batch) =>
+          gsap.set(batch, {
+            opacity: 0,
+            y: -100,
+            stagger: 0.3,
+            overwrite: true,
+            duration: 2,
+          }),
+        onLeaveBack: (batch) =>
+          gsap.set(batch, {
+            opacity: 0,
+            y: 100,
+            stagger: 0.3,
+            overwrite: true,
+            duration: 2,
+          }),
+      });
+
+      const resizeObserver = new ResizeObserver(() => {
+        ScrollTrigger.refresh();
+      });
+
+      if (gridContainerRef.current) {
+        resizeObserver.observe(gridContainerRef.current);
+      }
+
+      return () => {
+        resizeObserver.disconnect();
+        batch.kill();
+      };
+    }
+  }, [isLoaded]);
+
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -67,7 +129,7 @@ const HomeScreen = () => {
               </span>
             </span>
           </span>
-          <div className="grid-container">
+          <div className="grid-container" ref={gridContainerRef}>
             {[
               { Component: Item1, id: "home" },
               { Component: Item2, id: "home" },
@@ -84,9 +146,11 @@ const HomeScreen = () => {
               <div
                 key={index}
                 id={id}
-                className={`item-${index + 1} item-hover`}
+                className={`item-${index + 1} item-hover grid-cards`}
                 onMouseMove={handleMouseMove}
                 style={{
+                  opacity: 0,
+                  y: 100,
                   "--clr": "#00adf2",
                 }}
               >
