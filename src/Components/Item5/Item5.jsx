@@ -3,6 +3,7 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import Button from "@mui/material/Button";
 import { MdOutlineFileDownload } from "react-icons/md";
 import "./Item5.css";
+import { HoverBorderGradient } from "../UI/hover-border-gradient";
 
 const Item5 = () => {
   return (
@@ -11,7 +12,7 @@ const Item5 = () => {
         <IoDocumentTextOutline />
       </div>
       <div className="txt1">CV</div>
-      <doiv className="btn-cont">
+      {/* <div className="btn-cont">
         <Button
           variant="contained"
           startIcon={<MdOutlineFileDownload />}
@@ -25,7 +26,17 @@ const Item5 = () => {
         >
           Download
         </Button>
-      </doiv>
+      </div> */}
+      <div className="btn-cont">
+        <HoverBorderGradient
+          containerClassName="rounded-full"
+          as="button"
+          className="HoverBorderGradient"
+        >
+          <MdOutlineFileDownload size={15} />
+          <span className="text">Download</span>
+        </HoverBorderGradient>
+      </div>
     </div>
   );
 };
