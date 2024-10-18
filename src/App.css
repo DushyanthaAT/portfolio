@@ -26,10 +26,12 @@
 
 body{
     background-color: var(--bgColor);
+    background: radial-gradient(ellipse at bottom, #000000 0%,#090a0f 100%);
+    
 }
 
 .App{
-    width: 100vw;
+    width: 90vw;
 }
 
 /* For WebKit browsers */
@@ -45,10 +47,10 @@ body::-webkit-scrollbar {
   /* Hide scrollbar for all browsers */
   body {
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
-    scrollbar-width: none;     /* For Firefox */
+    scrollbar-width:auto;     /* For Firefox */
   }
   
   .element {
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: auto;
   }
