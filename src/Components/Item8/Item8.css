@@ -7,7 +7,7 @@
     max-width: 4fr;
     overflow: hidden;
     padding: 30px 0px;
-    
+    height: fit-content;
     position: relative;
     z-index: 2;
     .com1{
@@ -32,7 +32,7 @@
     }
     .portfolio-items{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(370px,400px));
+        grid-template-columns: repeat(auto-fill, minmax(170px,400px));
         grid-template-rows: auto;
         grid-gap: 20px;
         width: 100%;
