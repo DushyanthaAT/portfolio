@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { webSite } from "../../images";
 import "./Image_Slider.css";
+import Tilty from "react-tilty";
 
 function Image_Slider() {
   var settings = {
@@ -12,7 +13,7 @@ function Image_Slider() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1900,
     pauseOnHover: true,
     appendDots: (dots) => (
       <div
@@ -70,12 +71,14 @@ function Image_Slider() {
   return (
     <Slider {...settings}>
       {img_data.map((d) => (
-        <div className="cer-container">
-          <div className="cer-img">
-            <img src={d.img_src} alt="" />
+        <Tilty max={8}>
+          <div className="cer-container">
+            <div className="cer-img">
+              <img src={d.img_src} alt="" />
+            </div>
+            <span className="cer-title">{d.img_title}</span>
           </div>
-          <span className="cer-title">{d.img_title}</span>
-        </div>
+        </Tilty>
       ))}
     </Slider>
   );

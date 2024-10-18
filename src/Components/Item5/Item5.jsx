@@ -11,19 +11,21 @@ const Item5 = () => {
         <IoDocumentTextOutline />
       </div>
       <div className="txt1">CV</div>
-      <Button
-        variant="contained"
-        startIcon={<MdOutlineFileDownload />}
-        sx={[
-          { borderRadius: 50 },
-          { width: "conterntFit" },
-          { fontSize: "0.55rem" },
-          { padding: "2px 15px" },
-          { backgroundColor: "var(--appBlue)" },
-        ]}
-      >
-        Download
-      </Button>
+      <doiv className="btn-cont">
+        <Button
+          variant="contained"
+          startIcon={<MdOutlineFileDownload />}
+          sx={[
+            { borderRadius: 50 },
+            { width: "conterntFit" },
+            { fontSize: "0.55rem" },
+            { padding: "2px 15px" },
+            { backgroundColor: "var(--appBlue)" },
+          ]}
+        >
+          Download
+        </Button>
+      </doiv>
     </div>
   );
 };

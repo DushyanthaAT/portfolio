@@ -1,26 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
-import {
-  profileImage,
-  boostrap,
-  c,
-  css,
-  figma,
-  firebase,
-  flutter,
-  git,
-  github,
-  html,
-  java,
-  js,
-  mongoDB,
-  mySQL,
-  nodeJs,
-  python,
-  react,
-  xd,
-  webSite,
-} from "../../images";
 import SideNav from "../../Components/SideNav/SideNav";
 import Item1 from "../../Components/Item1/Item1";
 import Item2 from "../../Components/Item2/Item2";
@@ -36,30 +15,80 @@ import Item11 from "../../Components/Item11/Item11";
 import "../responsive.css";
 import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
 import { Typewriter } from "react-simple-typewriter";
+import "./homebg.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HomeScreen = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  gsap.registerPlugin(ScrollTrigger);
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const gridContainerRef = useRef(null);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoaded(true);
+    }, 500);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (isLoaded) {
+      const batch = ScrollTrigger.batch(".grid-cards", {
+        duration: 1,
+        start: "top 90%",
+        end: "bottom 10%",
+        markers: true,
+        onEnter: (batch) =>
+          gsap.fromTo(
+            batch,
+            { opacity: 0, y: 100 },
+            { opacity: 1, y: 0, stagger: 0.15 }
+          ),
+        onEnterBack: (batch) =>
+          gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+        onLeave: (batch) =>
+          gsap.set(batch, {
+            opacity: 0,
+            y: -100,
+            stagger: 0.3,
+            overwrite: true,
+            duration: 2,
+          }),
+        onLeaveBack: (batch) =>
+          gsap.set(batch, {
+            opacity: 0,
+            y: 100,
+            stagger: 0.3,
+            overwrite: true,
+            duration: 2,
+          }),
+      });
+
+      const resizeObserver = new ResizeObserver(() => {
+        ScrollTrigger.refresh();
+      });
+
+      if (gridContainerRef.current) {
+        resizeObserver.observe(gridContainerRef.current);
+      }
+
+      return () => {
+        resizeObserver.disconnect();
+        batch.kill();
+      };
+    }
+  }, [isLoaded]);
 
   const handleMouseMove = (e) => {
-    const { target } = e;
-    const { left, top } = target.getBoundingClientRect(); // Use getBoundingClientRect for better precision
-    setMousePosition({
-      x: e.clientX - left,
-      y: e.clientY - top,
-    });
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    e.currentTarget.style.setProperty("--x", `${x}px`);
+    e.currentTarget.style.setProperty("--y", `${y}px`);
   };
-  const cardData = [
-    {
-      iconImages: [html, css, js],
-      imageurl: webSite,
-      title: "TestTitle",
-      desc: "Lorem ipsum dolor sit amet consectetur adipi",
-      beUrl: "https://www.behance.com",
-      gitUrl: "https://www.github.com",
-      figUrl: "https://www.figma.com",
-      Category: "web",
-    },
-  ];
+
   return (
     <div className="document">
       <div className="bottomNav">
@@ -70,6 +99,8 @@ const HomeScreen = () => {
           <SideNav />
         </div>
         <div className="rightArea">
+          <div id="stars"></div>
+          <div id="stars2"></div>
           <span id="home" className="rightarea-heading">
             <span
               style={{
@@ -82,7 +113,6 @@ const HomeScreen = () => {
             >
               I am a{" "}
               <span style={{ color: "#00adf2", fontWeight: "bold" }}>
-                {/* Style will be inherited from the parent element */}
                 <Typewriter
                   words={[
                     "Full Stack Developer",
@@ -99,107 +129,34 @@ const HomeScreen = () => {
               </span>
             </span>
           </span>
-          <div className="grid-container">
-            <div
-              className="item-1 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item1 />
-            </div>
-            <div
-              className="item-2 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item2 />
-            </div>
-            <div
-              className="item-3 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item3 />
-            </div>
-            <div
-              className="item-4 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item4 />
-            </div>
-            <div
-              className="item-5 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item5 />
-            </div>
-            <div
-              id="home"
-              className="item-6 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item6 />
-            </div>
-            <div
-              id="about"
-              className="item-7 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item7 />
-            </div>
-            <div
-              id="portfolio"
-              className="item-8 item-hover"
-              onMouseMove={handleMouseMove}
-              style={{
-                "--x": `${mousePosition.x}px`,
-                "--y": `${mousePosition.y}px`,
-                "--clr": "#00adf2",
-              }}
-            >
-              <Item8 />
-            </div>
-            <div id="winnings" className="item-9">
-              <Item9 />
-            </div>
-            <div id="contacts" className="item-10">
-              <Item10 />
-            </div>
-            <div className="item-11">
-              <Item11 />
-            </div>
+          <div className="grid-container" ref={gridContainerRef}>
+            {[
+              { Component: Item1, id: "home" },
+              { Component: Item2, id: "home" },
+              { Component: Item3, id: "iam" },
+              { Component: Item4, id: "status" },
+              { Component: Item5, id: "home" },
+              { Component: Item6, id: "home" },
+              { Component: Item7, id: "about" },
+              { Component: Item8, id: "portfolio" },
+              { Component: Item9, id: "winnings" },
+              { Component: Item10, id: "contacts" },
+              { Component: Item11, id: "contacts" },
+            ].map(({ Component, id }, index) => (
+              <div
+                key={index}
+                id={id}
+                className={`item-${index + 1} item-hover grid-cards`}
+                onMouseMove={handleMouseMove}
+                style={{
+                  opacity: 0,
+                  y: 100,
+                  "--clr": "#00adf2",
+                }}
+              >
+                <Component />
+              </div>
+            ))}
           </div>
         </div>
       </div>

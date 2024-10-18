@@ -6,7 +6,6 @@ import { BsInfoCircle } from "react-icons/bs";
 import { LuMessagesSquare } from "react-icons/lu";
 import { profileImage } from "../../images";
 import "./SideNav.css";
-import "../../Pages/responsive.css";
 
 const SideNav = () => {
   const [selectedItem, setSelectedItem] = useState("home");
@@ -19,11 +18,23 @@ const SideNav = () => {
     setSelectedItem(id);
   };
 
-  useEffect(() => {
+  const updateSelectedItemOnScroll = () => {
     const sections = document.querySelectorAll("div[id]"); // Select all divs with IDs
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      // Check if the section is in the viewport
+      if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+        setSelectedItem(section.id);
+      }
+    });
+  };
+
+  useEffect(() => {
+    // Observe sections for intersection changes
+    const sections = document.querySelectorAll("div[id]");
     const options = {
-      root: null, // Use the viewport as the root
-      threshold: 0.5, // Trigger when 50% of the section is in view
+      root: null,
+      threshold: 0.8,
     };
 
     const observerCallback = (entries) => {
@@ -37,8 +48,12 @@ const SideNav = () => {
     const observer = new IntersectionObserver(observerCallback, options);
     sections.forEach((section) => observer.observe(section));
 
+    // Add scroll event listener to update selected item
+    window.addEventListener("scroll", updateSelectedItemOnScroll);
+
     return () => {
       sections.forEach((section) => observer.unobserve(section));
+      window.removeEventListener("scroll", updateSelectedItemOnScroll); // Clean up the event listener
     };
   }, []);
 

@@ -1,5 +1,4 @@
-.item-9{
-    background-color: var(--priColor);
+.item-9in{
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -7,6 +6,8 @@
     padding: 30px 0px;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2;
     .imgSlider{
         width: 80%;
         margin: 30px 0px;
@@ -14,6 +15,7 @@
     .winnings-header{
         text-align: center;
     }
+    
 }
 
 @media (max-width:900px) {
