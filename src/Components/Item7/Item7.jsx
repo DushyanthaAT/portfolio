@@ -12,6 +12,7 @@ import TimelineComponent2 from "../timelineComponent/timelineComponent2";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import "./Item7.css";
+import { HoverBorderGradient } from "../UI/hover-border-gradient";
 
 const Item7 = () => {
   const [toggle, setToggle] = useState(1);
@@ -53,7 +54,7 @@ const Item7 = () => {
               <FaInstagram />
               <FaDribbble />
             </div>
-            <Button
+            {/* <Button
               variant="contained"
               startIcon={<MdOutlineFileDownload />}
               sx={[
@@ -65,7 +66,17 @@ const Item7 = () => {
               ]}
             >
               Donwload CV
-            </Button>
+            </Button> */}
+            <div className="btn-cont">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="HoverBorderGradient"
+              >
+                <MdOutlineFileDownload size={15} />
+                <span className="text">Download CV</span>
+              </HoverBorderGradient>
+            </div>
           </div>
         </div>
       </div>
