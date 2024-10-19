@@ -233,7 +233,12 @@
   } 
 
 
-
+.web-footer{
+    padding: 20px 10px;
+    .footer-txt{
+        font-size: 0.7rem;
+    }
+}
 
 
 

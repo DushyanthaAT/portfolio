@@ -24,6 +24,26 @@ const HomeScreen = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const gridContainerRef = useRef(null);
+  const sideNavRef = useRef(null);
+  const headingRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      headingRef.current,
+      { x: "-100%", opacity: 0 }, // Start off-screen
+      { x: "0%", opacity: 1, duration: 1, ease: "power2.out", delay: 0.5 } // Animate into view
+    );
+  }, []);
+
+  useEffect(() => {
+    if (sideNavRef.current) {
+      gsap.fromTo(
+        sideNavRef.current,
+        { x: "-250px", opacity: 0 }, // Start outside the viewport
+        { x: "0px", opacity: 1, duration: 1, ease: "power2.out" } // Animate into view
+      );
+    }
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -36,9 +56,9 @@ const HomeScreen = () => {
     if (isLoaded) {
       const batch = ScrollTrigger.batch(".grid-cards", {
         duration: 1,
-        start: "top 90%",
-        end: "bottom 10%",
-        markers: true,
+        start: "top 95%",
+        end: "bottom 8%",
+        // markers: true,
         onEnter: (batch) =>
           gsap.fromTo(
             batch,
@@ -95,13 +115,13 @@ const HomeScreen = () => {
         <BottomNavMobile />
       </div>
       <div className="doc-wrapper">
-        <div className="sideNav">
+        <div className="sideNav" ref={sideNavRef}>
           <SideNav />
         </div>
         <div className="rightArea">
           <div id="stars"></div>
           <div id="stars2"></div>
-          <span id="home" className="rightarea-heading">
+          <span id="home" className="rightarea-heading" ref={headingRef}>
             <span
               style={{
                 paddingTop: "5rem",
@@ -157,6 +177,11 @@ const HomeScreen = () => {
                 <Component />
               </div>
             ))}
+          </div>
+          <div className="web-footer">
+            <span className="footer-txt">
+              © 2024 Dushyantha Thilakarathna. All Rights Reserved.
+            </span>
           </div>
         </div>
       </div>

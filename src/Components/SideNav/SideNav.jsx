@@ -64,7 +64,11 @@ const SideNav = () => {
           <img src={profileImage} alt="Profile-Image" />
         </div>
         <div className="profile-name">
-          <p>JAMES SMITH</p>
+          <p>
+            Dushyantha
+            <br />
+            Thilakarathne
+          </p>
         </div>
       </div>
       <div className="sideMenu-Items">

@@ -5,7 +5,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import { VCK, SUSL } from "../../images";
+import { VCK, SUSL, ICBT } from "../../images";
 import "./timelineComponent.css";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import "../../Pages/responsive.css";
@@ -39,6 +39,33 @@ const TimelineComponent = () => {
             </div>
           </TimelineContent>
         </TimelineItem>
+
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot sx={{ py: "12px", px: "12px", padding: "0px" }}>
+              <img src={ICBT} alt="" />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2, lineHeight: 0 }}>
+            <div className="tlcontainer2">
+              <span className="tltxt1">
+                Diploma in Information and Communication Technology
+                <br />
+              </span>
+              <span className="tltxt2">
+                ICBT Campus
+                <br />
+              </span>
+              <div className="tldate">
+                <EventNoteIcon sx={{ fontSize: "0.8rem" }} />
+                <span className="tltxt2">2019 - 2020</span>
+              </div>
+            </div>
+          </TimelineContent>
+        </TimelineItem>
+
         <TimelineItem>
           <TimelineSeparator>
             <TimelineConnector />
@@ -48,7 +75,7 @@ const TimelineComponent = () => {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2, lineHeight: 0 }}>
-            <div className="tlcontainer2">
+            <div className="tlcontainer3">
               <span className="tltxt1">
                 GCE Advanced Level
                 <br />
@@ -73,7 +100,7 @@ const TimelineComponent = () => {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2, lineHeight: 0 }}>
-            <div className="tlcontainer3">
+            <div className="tlcontainer4">
               <span className="tltxt1">
                 GCE Ordinary Level
                 <br />

@@ -1,0 +1,45 @@
+.splashBG {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Change text color as needed */
+  position: relative; 
+  background:transparent;
+}
+
+.intro-container {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.name {
+  font-size: 2rem;
+  position: relative;
+}
+
+.masked-text {
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 70%);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200%; /* Create a large enough area to animate across */
+  background-position: 200%; /* Start the animation outside the text */
+  position: relative;
+  z-index: 1;
+}
+
+.first-name {
+  margin-right: 0.5rem;
+}
+
+.last-name {
+  margin-left: 0.5rem;
+}

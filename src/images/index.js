@@ -23,6 +23,7 @@ import SIGHT from "./SIGHT.jpg";
 import SLSAC from "./SLSAC.jpg";
 import IEEESUSL from "./IEEESUSL.jpg";
 import webSite from "./webSite.jpg";
+import ICBT from "./ICBT.jpg";
 
 export {
   profileImage,
@@ -50,4 +51,5 @@ export {
   SLSAC,
   IEEESUSL,
   webSite,
+  ICBT,
 };

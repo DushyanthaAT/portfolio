@@ -18,7 +18,7 @@ const timelineComponent2 = () => {
             <TimelineSeparator>
               <TimelineConnector />
               <TimelineDot sx={{ py: "12px", px: "12px", padding: "0px" }}>
-                <img src={SIGHT} alt="" />
+                <img src={IEEESUSL} alt="" />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
@@ -27,7 +27,36 @@ const timelineComponent2 = () => {
             >
               <div className="tlcontainer">
                 <span className="tltxt1">
-                  Position Here
+                  Chairperson
+                  <br />
+                </span>
+                <span className="tltxt2">
+                  IEEE Student Branch of SUSL
+                  <br />
+                </span>
+                <div className="tldate">
+                  <EventNoteIcon sx={{ fontSize: "0.8rem" }} />
+                  <span className="tltxt2">2024 - Present</span>
+                </div>
+              </div>
+            </TimelineContent>
+          </TimelineItem>
+
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot sx={{ py: "12px", px: "12px", padding: "0px" }}>
+                <img src={SIGHT} alt="" />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent
+              sx={{ py: "12px", px: 2, lineHeight: 0, width: 200 }}
+            >
+              <div className="tlcontainer2">
+                <span className="tltxt1">
+                  Technical <br />
+                  Sub-committee Member
                   <br />
                 </span>
                 <span className="tltxt2">
@@ -41,6 +70,7 @@ const timelineComponent2 = () => {
               </div>
             </TimelineContent>
           </TimelineItem>
+
           <TimelineItem>
             <TimelineSeparator>
               <TimelineConnector />
@@ -52,7 +82,7 @@ const timelineComponent2 = () => {
             <TimelineContent
               sx={{ py: "12px", px: 2, lineHeight: 0, width: 300 }}
             >
-              <div className="tlcontainer2">
+              <div className="tlcontainer3">
                 <span className="tltxt1">
                   Graphic Designer
                   <br />
@@ -77,9 +107,9 @@ const timelineComponent2 = () => {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: "12px", px: 2, lineHeight: 0 }}>
-              <div className="tlcontainer3">
+              <div className="tlcontainer4">
                 <span className="tltxt1">
-                  Vice Chair
+                  Vice Chairperson
                   <br />
                 </span>
                 <span className="tltxt2">
@@ -104,7 +134,7 @@ const timelineComponent2 = () => {
             <TimelineContent
               sx={{ py: "12px", px: 2, lineHeight: 0, width: 300 }}
             >
-              <div className="tlcontainer4">
+              <div className="tlcontainer5">
                 <span className="tltxt1">
                   Public Visibility Team Member
                   <br />
@@ -131,7 +161,7 @@ const timelineComponent2 = () => {
             <TimelineContent
               sx={{ py: "12px", px: 2, lineHeight: 0, width: 300 }}
             >
-              <div className="tlcontainer5">
+              <div className="tlcontainer6">
                 <span className="tltxt1">
                   Graphic Designer
                   <br />

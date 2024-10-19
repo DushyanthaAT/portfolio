@@ -25,6 +25,7 @@ const Item10 = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
@@ -62,13 +63,28 @@ const Item10 = () => {
             <span className="sm-title">Connect with me</span>
             <div className="sm-icons-container">
               <div className="sm-icon">
-                <FacebookIcon sx={{ fontSize: "1.2rem" }} />
+                <a
+                  href="https://web.facebook.com/dushyantha.tilakarathne"
+                  target="_blank"
+                >
+                  <FacebookIcon sx={{ fontSize: "1.2rem" }} />
+                </a>
               </div>
               <div className="sm-icon">
-                <InstagramIcon sx={{ fontSize: "1.2rem" }} />
+                <a
+                  href="https://www.instagram.com/_dush.yan.tha_/?next=%2Fieeesrilanka%2F"
+                  target="_blank"
+                >
+                  <InstagramIcon sx={{ fontSize: "1.2rem" }} />
+                </a>
               </div>
               <div className="sm-icon">
-                <LinkedInIcon sx={{ fontSize: "1.2rem" }} />
+                <a
+                  href="https://www.linkedin.com/in/dushyantha-thilakarathne-20837821a/"
+                  target="_blank"
+                >
+                  <LinkedInIcon sx={{ fontSize: "1.2rem" }} />
+                </a>
               </div>
             </div>
           </div>
