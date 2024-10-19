@@ -8,7 +8,7 @@
     --textCol2: #c9cbce;
     --textCol3: #949699;
     --clr: #3498db;
-    --priGrd:linear-gradient(315deg, #bababa15 0%, rgba(114, 114, 114, 0.195) 74%);
+    --priGrd:linear-gradient(315deg, #dcdcdc15 0%, rgba(187, 187, 187, 0.195) 74%);
     
 }
 
@@ -31,8 +31,9 @@ body{
 }
 
 .App{
-    width: 90vw;
+    /* width: 90vw; */
 }
+
 
 /* For WebKit browsers */
 body::-webkit-scrollbar {
