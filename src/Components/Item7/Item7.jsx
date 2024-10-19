@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import { FaDribbble } from "react-icons/fa";
+import { FaBehance } from "react-icons/fa";
 import TimelineComponent from "../timelineComponent/TimelineComponent";
 import TimelineComponent2 from "../timelineComponent/timelineComponent2";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
@@ -28,31 +28,60 @@ const Item7 = () => {
             <img src={profileImage} alt="profile image" />
           </div>
           <div className="amRight">
-            <span className="txt2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              temporibus cumque consequuntur vitae ipsum, earum voluptate nisi
-              iure ullam quae dolore exercitationem excepturi cum fugiat
-              corporis laborum reiciendis quibusdam placeat commodi omnis
-              pariatur. Eius, blanditiis eligendi explicabo, repellendus nostrum
-              quasi magnam accusantium consequuntur culpa perspiciatis facilis
-              officiis reiciendis ducimus corporis dignissimos tempore deserunt
-              veniam ab totam, pariatur est dolore! Quo doloribus rem minus, ab
-              delectus unde veritatis dicta a deleniti asperiores est in
-              quibusdam maiores, velit voluptas quaerat ut laborum vero dolore
-              ducimus dolor. Totam temporibus, maiores quam officiis libero
-              repellat accusamus iste, aut laborum aliquam possimus eos, quod
-              cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Provident consectetur porro voluptates exercitationem
-              doloremque reprehenderit magni nesciunt iusto culpa molestiae esse
-              dignissimos perferendis vero adipisci cumque animi delectus,
-              aspernatur nihil?
+            <span className="txt2 aboutme-para">
+              I am a software engineering undergraduate specializing in UI/UX
+              design and frontend development. With a strong foundation in
+              problem-solving, I am eager to design innovative solutions that
+              enhance user experiences. My passion for taking on new challenges
+              drives me to continuously expand my knowledge in the field,
+              ensuring I stay at the forefront of industry trends. I thrive in
+              collaborative environments, leveraging my solid teamwork and
+              leadership skills to contribute fresh ideas that push projects
+              forward. I believe in the power of design to create captivating
+              digital journeys and am committed to crafting solutions that
+              engage and empower users.
             </span>
             <div className="amIcons">
-              <FaGithub />
-              <IoLogoLinkedin />
-              <FaFacebook />
-              <FaInstagram />
-              <FaDribbble />
+              <a
+                data-social="Github"
+                href="https://github.com/DushyanthaAT"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                data-social="LinkedIn"
+                href="https://www.linkedin.com/in/dushyantha-thilakarathne-20837821a/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IoLogoLinkedin />
+              </a>
+              <a
+                data-social="Facebook"
+                href="https://web.facebook.com/dushyantha.tilakarathne"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                data-social="Instagram"
+                href="https://www.instagram.com/_dush.yan.tha_/?next=%2Fieeesrilanka%2F"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                data-social="Behance"
+                href="https://www.behance.net/dushyanthilaka"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaBehance />
+              </a>
             </div>
             {/* <Button
               variant="contained"
@@ -68,14 +97,20 @@ const Item7 = () => {
               Donwload CV
             </Button> */}
             <div className="btn-cont">
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
-                className="HoverBorderGradient"
+              <a
+                href="/cv.pdf"
+                download="Dushyantha_CV.pdf"
+                className="download-btn"
               >
-                <MdOutlineFileDownload size={15} />
-                <span className="text">Download CV</span>
-              </HoverBorderGradient>
+                <HoverBorderGradient
+                  containerClassName="rounded-full"
+                  as="button"
+                  className="HoverBorderGradient"
+                >
+                  <MdOutlineFileDownload size={15} />
+                  <span className="text">Download CV</span>
+                </HoverBorderGradient>
+              </a>
             </div>
           </div>
         </div>
