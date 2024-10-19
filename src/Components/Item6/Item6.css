@@ -1,60 +1,52 @@
-.item-6in{
+.item-6in {
     /* background-color: var(--priColor); */
     border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    
     position: relative;
     z-index: 2;
-    /* pointer-events: none;    */
-
-    .expertise-container{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        gap: 30px;
-        .exp-left{
-            flex:1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .exp-right{
-            flex: 3;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap:20px;
-
-            .exp-right-flex1{
-                flex:1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap:60px;
-            }
-
-            .exp-right-flex2{
-                flex:1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap:60px;
-            }
-            .exp-right-flex3{
-                flex:1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap:60px;
-                padding-bottom: 10px;
-            }
-        }
-        pointer-events: none; 
-    }
+    /* pointer-events: none; */
 }
 
+.item-6in > .expertise-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+}
 
+.item-6in > .expertise-container > .exp-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-6in > .expertise-container > .exp-right {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-6in > .expertise-container > .exp-right > .exp-right-flex1,
+.item-6in > .expertise-container > .exp-right > .exp-right-flex2,
+.item-6in > .expertise-container > .exp-right > .exp-right-flex3 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.item-6in > .expertise-container > .exp-right > .exp-right-flex3 {
+    padding-bottom: 10px;
+}
+
+.item-6in > .expertise-container {
+    pointer-events: none; 
+}
