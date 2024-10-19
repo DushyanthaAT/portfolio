@@ -27,7 +27,7 @@
     align-items: center;
     gap: 5px;
 
-    background-color: #00adf2; /* Default color */
+    background-color: #00adf2; 
   transition: background-color 0.3s ease;
 
     .text{
@@ -36,5 +36,12 @@
 }
 
 .HoverBorderGradient:hover {
-    background-color: black; /* Hover color */
+    background-color: black; 
+  }
+
+
+  .download-btn {
+    text-decoration: none;  
+    color: inherit;         
+    display: inline-block;  
   }
