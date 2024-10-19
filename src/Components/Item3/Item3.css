@@ -4,7 +4,7 @@
     /* background-color: var(--priColor); */
     border-radius: 25px;
     justify-content: center;
-    padding: 40px;
+    padding: 100px;
     align-items: start;
     overflow: hidden;
     width: auto;
@@ -12,4 +12,9 @@
     position: relative;
     z-index: 2;
     pointer-events: none;
+}
+
+.item-3in>.txt2{
+    line-height: 1.3rem;
+
 }
