@@ -84,3 +84,66 @@
         display: block;
     }   
 }
+
+.aboutme-para{
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.amIcons>a{
+    background-color: rgba(255, 255, 255, 0.32);
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    height: auto;
+    width: fit-content;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;  
+    border: none;
+    cursor: pointer;
+}
+.amIcons>a::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color: #00adf2;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    transform: translateY(-30px) rotate(25deg);
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: 200ms cubic-bezier(0.64, 0.25, 0.24, 0.99);
+}
+
+.amIcons>a:hover{
+    background-color: #00adf2;
+    color: aliceblue;
+}
+
+.amIcons>a::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(0.64, 0.25, 0.24, 0.99);
+}
+
+.amIcons>a:hover::before{
+    transform: translateY(-30px) rotate(0);
+    opacity: 1;
+}
+
+.amIcons>a:hover::after{
+    transform: translateY(-42px) rotate(0);
+    opacity: 1;
+}
