@@ -1,19 +1,22 @@
 import React from "react";
 import "./Item3.css";
+import { TextGenerateEffect } from "../UI/text-generate-effect";
 
+const words =
+  "passionate about crafting impactful software solutions that seamlessly blend functionality and design while prioritizing user experience and addressing real-world challenges. Let’s embark on this exciting journey together to transform your visionary ideas into reality!";
 const Item3 = () => {
   return (
     <div className="item item-3in">
       <span className="txt1">I am</span>
       <span className="txt2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae
-        placeat veritatis quisquam facilis sunt neque? Aliquid, atque id.
-        Deleniti nulla dolorem sunt suscipit. Sint nemo pariatur exercitationem
-        ea eaque qui excepturi nesciunt fugiat quas natus laborum officiis vero
-        tempora neque sunt inventore, corrupti fugit quibusdam! Fuga porro
-        doloribus repellat pariatur voluptatibus? Non accusamus eligendi nihil
-        ipsam consequatur debitis facere architecto aliquid assumenda, quidem
-        repellendus, voluptatem necessitatibus, porro praesentium facilis?
+        <TextGenerateEffect
+          words={words}
+          style={{
+            color: "var(--textCol3)",
+            fontSize: "0.5rem",
+            lineHeight: "1.3rem",
+          }}
+        />
       </span>
     </div>
   );
