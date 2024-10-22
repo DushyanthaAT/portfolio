@@ -1,8 +1,22 @@
 import React from "react";
 import "./cardComponent.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SiAdobexd } from "react-icons/si";
+import { FaFigma } from "react-icons/fa";
 
 const CardComponent = ({ item }) => {
   const icons = Array.isArray(item.iconImages) ? item.iconImages : [];
+
+  const renderDesignIcon = () => {
+    if (item.designTool === "figma") {
+      return <FaFigma className="com-icon" />;
+    } else if (item.designTool === "xd") {
+      return <SiAdobexd className="com-icon" />;
+    } else {
+      return <i className="fa-solid fa-pen-ruler"></i>; // Default icon if no designTool is provided
+    }
+  };
+
   return (
     <div className="ProContainer">
       <div className="Cflex1">
@@ -30,48 +44,46 @@ const CardComponent = ({ item }) => {
       </div>
       <div className="Cflex4">
         <div className="button">
-          <div
-            className="btn-icon"
-            onClick={() => {
-              window.open(item.beUrl, "_blank");
-            }}
-          >
-            <div className="icon">
-              <i class="fa-brands fa-behance"></i>
+          {item.beUrl && (
+            <div
+              className="btn-icon"
+              onClick={() => window.open(item.beUrl, "_blank")}
+            >
+              <div className="icon">
+                <i className="fa-brands fa-behance com-icon"></i>
+              </div>
+              <span>
+                See the <br />
+                Case Study
+              </span>
             </div>
-            <span>
-              See the <br />
-              Case Study
-            </span>
-          </div>
-          <div
-            className="btn-icon"
-            onClick={() => {
-              window.open(item.gitUrl, "_blank");
-            }}
-          >
-            <div className="icon">
-              <i class="fa-brands fa-github"></i>
+          )}
+          {item.gitUrl && (
+            <div
+              className="btn-icon"
+              onClick={() => window.open(item.gitUrl, "_blank")}
+            >
+              <div className="icon">
+                <i className="fa-brands fa-github com-icon"></i>
+              </div>
+              <span>
+                See the <br />
+                Code
+              </span>
             </div>
-            <span>
-              See the <br />
-              Code
-            </span>
-          </div>
-          <div
-            className="btn-icon"
-            onClick={() => {
-              window.open(item.figUrl, "_blank");
-            }}
-          >
-            <div className="icon">
-              <i class="fa-brands fa-figma"></i>
+          )}
+          {item.figUrl && (
+            <div
+              className="btn-icon design-icon"
+              onClick={() => window.open(item.figUrl, "_blank")}
+            >
+              <div className="icon">{renderDesignIcon()}</div>
+              <span>
+                See the <br />
+                Design
+              </span>
             </div>
-            <span>
-              See the <br />
-              Design
-            </span>
-          </div>
+          )}
         </div>
       </div>
     </div>
