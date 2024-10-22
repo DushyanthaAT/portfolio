@@ -15,7 +15,10 @@ import mySQL from "./icons/mySQL.png";
 import nodeJs from "./icons/nodeJs.png";
 import python from "./icons/python.png";
 import react from "./icons/react.png";
+import php from "./icons/php.png";
 import xd from "./icons/xd.png";
+import ps from "./icons/ps.png";
+import ai from "./icons/ai.png";
 import VCK from "./VCK.jpg";
 import SUSL from "./SUSL.jpg";
 import YP from "./YP.jpg";
@@ -24,6 +27,9 @@ import SLSAC from "./SLSAC.jpg";
 import IEEESUSL from "./IEEESUSL.jpg";
 import webSite from "./webSite.jpg";
 import ICBT from "./ICBT.jpg";
+import LMSSUSL from "./Projects/LMSSUSL.jpg";
+import GOGO from "./Projects/GOGO.jpg";
+import unistore from "./Projects/unistore.jpg";
 
 export {
   profileImage,
@@ -43,7 +49,10 @@ export {
   nodeJs,
   python,
   react,
+  php,
   xd,
+  ps,
+  ai,
   VCK,
   SUSL,
   YP,
@@ -52,4 +61,7 @@ export {
   IEEESUSL,
   webSite,
   ICBT,
+  LMSSUSL,
+  GOGO,
+  unistore,
 };

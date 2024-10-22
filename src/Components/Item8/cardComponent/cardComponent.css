@@ -21,7 +21,7 @@
                 border-radius: 50px;
                 margin-right: 6px;
                 padding: 2px;
-                background-color:rgb(93, 93, 93);
+                background-color:rgb(255, 255, 255);
             }
         }
     }
@@ -45,7 +45,9 @@
         }
         .ProDescription{
             font-size: 0.8rem;
-            color:var(--textCol3)
+            color:var(--textCol3);
+            text-align: justify;
+            line-height: 0.9rem;
         }
     }
     .Cflex4{
@@ -97,4 +99,9 @@
             }
         }
     }
+}
+
+.com-icon{
+    padding: 10px;
+                    font-size: 1.8rem;
 }
