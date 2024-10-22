@@ -2,7 +2,17 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { webSite } from "../../images";
+import {
+  codefest2021,
+  codefest2022,
+  codesprints,
+  hacktrone,
+  ix23,
+  masterdesigner,
+  slasscom,
+  uxplore,
+  webSite,
+} from "../../images";
 import "./Image_Slider.css";
 import Tilty from "react-tilty";
 
@@ -43,29 +53,36 @@ function Image_Slider() {
   };
   const img_data = [
     {
-      img_title: "Test Title",
-      img_src: webSite,
+      img_title: "Winner - Individual Category in Master Designer V2.0",
+      img_src: masterdesigner,
     },
     {
-      img_title: "Test Title 2",
-      img_src: webSite,
+      img_title: "Finalist in CodeSprint 8",
+      img_src: codesprints,
     },
     {
-      img_title:
-        "Test Title 3 asdsadasdasdasdasdsad asdas/</b> afasfasf asdfasfa saffdafdf",
-      img_src: webSite,
+      img_title: "1st Runners-Up in IX 23",
+      img_src: ix23,
     },
     {
-      img_title: "Test Title 4",
-      img_src: webSite,
+      img_title: "Regional Winners at SLASSCOM National Ingenuity Awards-2024",
+      img_src: slasscom,
     },
     {
-      img_title: "Test Title 5",
-      img_src: webSite,
+      img_title: "Finalist in Mora UXPlore 1.0",
+      img_src: uxplore,
     },
     {
-      img_title: "Test Title 6",
-      img_src: webSite,
+      img_title: "Finalist in Codefest 2022 Hackthon",
+      img_src: codefest2022,
+    },
+    {
+      img_title: "Finalist in Codefest 2021 Designthon",
+      img_src: codefest2021,
+    },
+    {
+      img_title: "Finalist in Hacktron V1.0",
+      img_src: hacktrone,
     },
   ];
   return (

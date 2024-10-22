@@ -19,6 +19,8 @@ import php from "./icons/php.png";
 import xd from "./icons/xd.png";
 import ps from "./icons/ps.png";
 import ai from "./icons/ai.png";
+import unity from "./icons/unity.png";
+import csharp from "./icons/csharp.png";
 import VCK from "./VCK.jpg";
 import SUSL from "./SUSL.jpg";
 import YP from "./YP.jpg";
@@ -30,6 +32,15 @@ import ICBT from "./ICBT.jpg";
 import LMSSUSL from "./Projects/LMSSUSL.jpg";
 import GOGO from "./Projects/GOGO.jpg";
 import unistore from "./Projects/unistore.jpg";
+import bom from "./Projects/bom.jpg";
+import masterdesigner from "./Winnings/masterdesigner.jpg";
+import codesprints from "./Winnings/codesprints.jpg";
+import slasscom from "./Winnings/slasscom.jpg";
+import ix23 from "./Winnings/ix23.jpg";
+import uxplore from "./Winnings/uxplore.jpg";
+import codefest2022 from "./Winnings/codefest2022.jpg";
+import codefest2021 from "./Winnings/codefest2021.jpg";
+import hacktrone from "./Winnings/hacktrone.jpg";
 
 export {
   profileImage,
@@ -64,4 +75,15 @@ export {
   LMSSUSL,
   GOGO,
   unistore,
+  unity,
+  csharp,
+  bom,
+  masterdesigner,
+  codesprints,
+  slasscom,
+  ix23,
+  uxplore,
+  codefest2022,
+  codefest2021,
+  hacktrone,
 };

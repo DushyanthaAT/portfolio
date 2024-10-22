@@ -27,6 +27,9 @@ import {
   ps,
   ai,
   unistore,
+  unity,
+  csharp,
+  bom,
 } from "../../images";
 
 import Tilty from "react-tilty";
@@ -71,6 +74,18 @@ const Item8 = () => {
         "https://www.figma.com/proto/lH89BYaWGB7xzYhR7raWps/UniStore?page-id=0%3A1&node-id=236-492&node-type=frame&viewport=-740%2C1461%2C0.13&t=22pajRpJJzwxtFxK-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=188%3A129&show-proto-sidebar=1",
       Category: "Web",
       designTool: "figma",
+    },
+    {
+      id: 4,
+      iconImages: [unity, csharp],
+      imageurl: bom,
+      title: "Unistore",
+      desc: "Blaze of Magic is an open-world game where players complete missions through portals to earn points. Collect enough points to unlock the final boss battle against Tigreal",
+      // beUrl: "https://www.behance.net/gallery/210740171/UniStrore",
+      gitUrl: "https://github.com/DushyanthaAT/Blaze-of-Magic",
+      figUrl: "https://dushyantha.itch.io/blaze-of-magic",
+      Category: "Game",
+      designTool: "itch",
     },
   ];
 
