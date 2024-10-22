@@ -13,7 +13,7 @@ const CardComponent = ({ item }) => {
     } else if (item.designTool === "xd") {
       return <SiAdobexd className="com-icon" />;
     } else {
-      return <i className="fa-solid fa-pen-ruler"></i>; // Default icon if no designTool is provided
+      return <i class="fa-brands fa-itch-io"></i>; // Default icon if no designTool is provided
     }
   };
 
