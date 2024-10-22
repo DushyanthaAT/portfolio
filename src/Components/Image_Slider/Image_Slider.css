@@ -6,10 +6,11 @@
     border-radius: 30px;
     display: flex!important;
     flex-direction: column;
+    padding-bottom: 10px;
     .cer-img{
         background-color:  var(--secColor);
         width: 100%;
-        padding: 10px;
+        padding: 10px 10px 5px 10px;
         flex: 10;
         img{
             width: calc(100% - 20px);
@@ -19,6 +20,7 @@
     }
     .cer-title{
         flex:1;
+        line-height: 1.2rem;
     }
     
 }
