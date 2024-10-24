@@ -30,8 +30,8 @@ const HomeScreen = () => {
   useEffect(() => {
     gsap.fromTo(
       headingRef.current,
-      { x: "-100%", opacity: 0 }, // Start off-screen
-      { x: "0%", opacity: 1, duration: 1, ease: "power2.out", delay: 0.5 } // Animate into view
+      { x: "-100%", opacity: 0 },
+      { x: "0%", opacity: 1, duration: 1, ease: "power2.out", delay: 0.5 }
     );
   }, []);
 
@@ -39,8 +39,8 @@ const HomeScreen = () => {
     if (sideNavRef.current) {
       gsap.fromTo(
         sideNavRef.current,
-        { x: "-250px", opacity: 0 }, // Start outside the viewport
-        { x: "0px", opacity: 1, duration: 1, ease: "power2.out" } // Animate into view
+        { x: "-250px", opacity: 0 },
+        { x: "0px", opacity: 1, duration: 1, ease: "power2.out" }
       );
     }
   }, []);
