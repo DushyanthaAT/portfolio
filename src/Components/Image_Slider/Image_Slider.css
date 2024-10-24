@@ -37,8 +37,11 @@
 }
 
 
-@media (min-width:900px) {
+@media (max-width:900px) {
     .cer-container{
         min-width: 100px;
+    }
+    .cer-title{
+        font-size: 0.7rem !important;    
     }
 }

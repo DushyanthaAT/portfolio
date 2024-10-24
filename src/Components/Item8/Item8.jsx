@@ -30,6 +30,7 @@ import {
   unity,
   csharp,
   bom,
+  wg,
 } from "../../images";
 
 import Tilty from "react-tilty";
@@ -40,7 +41,7 @@ const Item8 = () => {
       id: 1,
       iconImages: [react, php, mySQL],
       imageurl: LMSSUSL,
-      title: "LMS SUSL",
+      title: "LMS SUSL | Group",
       desc: "LMS SUSL is the Learning Management System of Sabaragamuwa University of Sri Lanka, providing students and lecturers with a digital platform to manage courses, access resources, and enhance learning through interactive tools.",
       beUrl:
         "https://www.behance.net/gallery/202623219/LMSSUSL-Learning-Management-Mobile-App-Case-Study",
@@ -66,7 +67,7 @@ const Item8 = () => {
       id: 3,
       iconImages: [react, css, firebase, figma],
       imageurl: unistore,
-      title: "Unistore",
+      title: "Unistore | Group",
       desc: "UniStore is an online platform for university students to buy and sell preloved items and handmade crafts, promoting sustainability and supporting student entrepreneurs.",
       beUrl: "https://www.behance.net/gallery/210740171/UniStrore",
       gitUrl: "https://github.com/DushyanthaAT/UniStore-web-project",
@@ -79,13 +80,26 @@ const Item8 = () => {
       id: 4,
       iconImages: [unity, csharp],
       imageurl: bom,
-      title: "Unistore",
+      title: "Blaze of Magic | Group",
       desc: "Blaze of Magic is an open-world game where players complete missions through portals to earn points. Collect enough points to unlock the final boss battle against Tigreal",
       // beUrl: "https://www.behance.net/gallery/210740171/UniStrore",
       gitUrl: "https://github.com/DushyanthaAT/Blaze-of-Magic",
       figUrl: "https://dushyantha.itch.io/blaze-of-magic",
       Category: "Game",
       designTool: "itch",
+    },
+    {
+      id: 5,
+      iconImages: [xd, ps, ai],
+      imageurl: wg,
+      title: "WellnessGrocers | Group",
+      desc: "A UI concept for Apple Vision that enhances grocery shopping with diet planning, health tracking, and a virtual gym. It empowers users through personalized recommendations and a gamified experience.",
+      beUrl: "https://www.behance.net/gallery/210019027/WellnessGrocer",
+      // gitUrl: "https://github.com/DushyanthaAT/Blaze-of-Magic",
+      figUrl:
+        "https://xd.adobe.com/view/46e016dd-c143-48b0-8c2b-ff242fdc29e0-13b3/",
+      Category: "UI/UX",
+      designTool: "xd",
     },
   ];
 

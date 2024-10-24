@@ -1,6 +1,5 @@
 .item-8in{
     display: flex;
-    /* background-color: var(--priColor); */
     border-radius: 25px;
     grid-column: 1/5;
     width: 100%;
