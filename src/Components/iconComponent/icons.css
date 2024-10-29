@@ -1,23 +1,26 @@
-.icon-container {
+.icon-container{
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.icon-container > .icon-image {
-    width: 50px;
-    height: fit-content;
-    max-height: 50px;
-    margin-bottom: 5px;
-}
-
-.icon-container > .txt2 {
-}
-
-@media (max-width: 900px) {
-    .icon-container > .icon-image {
-        width: 35px;
+    
+    .icon-image{
+        width: 50px;
+        height: fit-content;
+        max-height: 50px;
+        margin-bottom: 5px;
     }
+    .txt2{
+        
+    }
+}
+
+@media (max-width:900px) {
+    .icon-container{
+        .icon-image{
+            width: 35px;
+        }
+    }
+    
 }
