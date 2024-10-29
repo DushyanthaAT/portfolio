@@ -7,6 +7,9 @@ import { HoverBorderGradient } from "../UI/hover-border-gradient";
 
 const Item11 = () => {
   const GDPurl = "https://dushyanthathilakarathne.myportfolio.com/";
+  const handleButtonClick = () => {
+    window.open(GDPurl, "_blank");
+  };
   return (
     <div className="por-container">
       <div className="por-icon">
@@ -19,6 +22,7 @@ const Item11 = () => {
           containerClassName="rounded-full"
           as="button"
           className="HoverBorderGradient"
+          onClick={handleButtonClick}
         >
           <ColorLensIcon size={13} />
           <span className="text">Design Portfolio</span>

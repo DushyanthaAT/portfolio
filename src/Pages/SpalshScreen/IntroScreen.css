@@ -7,7 +7,7 @@
   align-items: center;
   color: #fff; /* Change text color as needed */
   position: relative; 
-  background:transparent;
+  background: transparent;
 }
 
 .intro-container {
@@ -21,8 +21,15 @@
 }
 
 .name {
-  font-size: 2rem;
+  font-size: 2rem; /* Default font size */
   position: relative;
+}
+
+/* Add media query for responsive text */
+@media (max-width: 600px) {
+  .name {
+    font-size: 1.5rem; /* Reduced font size for smaller screens */
+  }
 }
 
 .masked-text {
@@ -37,7 +44,7 @@
 }
 
 .first-name {
-  margin-right: 0.5rem;
+  margin-right: 0rem;
 }
 
 .last-name {
