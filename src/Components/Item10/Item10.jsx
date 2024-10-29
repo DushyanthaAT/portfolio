@@ -67,7 +67,7 @@ const Item10 = () => {
                   href="https://web.facebook.com/dushyantha.tilakarathne"
                   target="_blank"
                 >
-                  <FacebookIcon sx={{ fontSize: "1.2rem" }} />
+                  <FacebookIcon sx={{ fontSize: "1.2rem", color: "white" }} />
                 </a>
               </div>
               <div className="sm-icon">
@@ -75,7 +75,7 @@ const Item10 = () => {
                   href="https://www.instagram.com/_dush.yan.tha_/?next=%2Fieeesrilanka%2F"
                   target="_blank"
                 >
-                  <InstagramIcon sx={{ fontSize: "1.2rem" }} />
+                  <InstagramIcon sx={{ fontSize: "1.2rem", color: "white" }} />
                 </a>
               </div>
               <div className="sm-icon">
@@ -83,7 +83,7 @@ const Item10 = () => {
                   href="https://www.linkedin.com/in/dushyantha-thilakarathne-20837821a/"
                   target="_blank"
                 >
-                  <LinkedInIcon sx={{ fontSize: "1.2rem" }} />
+                  <LinkedInIcon sx={{ fontSize: "1.2rem", color: "white" }} />
                 </a>
               </div>
             </div>
