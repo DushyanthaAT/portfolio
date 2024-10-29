@@ -1,4 +1,4 @@
-.sideNav {
+.sideNav{
     display: flex;
     flex: 0.75;
     flex-direction: column;
@@ -6,68 +6,72 @@
     justify-content: center;
     background-color: var(--priColor);
     height: 100vh;
+    .profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px 10px 0px;
+        .profile-image{
+            img{
+                width: 100px;
+                height: 100px;;
+                border-radius: 50%
+            }
+        }
+        .profile-name{
+            p{
+                color: var(--textCol1);
+                font-size: 1rem;
+                font-weight:700;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    }
+    .sideMenu-Items{
+        ul{
+            list-style: none;
+            align-items: center;
+        }
+        li{
+            color: var(--textCol2);
+            display: flex;
+            align-items: center;
+            margin: 15px;
+            padding: 8px;
+            cursor: pointer;
+            width: 150px;
+            border-radius: 15px;
+            &:hover{
+                background-color: #a7abfb6f;
+            }
+            span{
+                padding-left: 8px;
+            }
+            .sideMenu-Items{
+                
+            }
+        }
+    }
+    
 }
 
-.sideNav > .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px 0px 10px 0px;
-}
-
-.sideNav > .profile > .profile-image > img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.sideNav > .profile > .profile-name > p {
-    color: var(--textCol1);
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.sideNav > .sideMenu-Items > ul {
-    list-style: none;
-    align-items: center;
-}
-
-.sideNav > .sideMenu-Items > ul > li {
-    color: var(--textCol2);
-    display: flex;
-    align-items: center;
-    margin: 15px;
-    padding: 8px;
-    cursor: pointer;
-    width: 150px;
-    border-radius: 15px;
-}
-
-.sideNav > .sideMenu-Items > ul > li:hover {
-    background-color: #a7abfb6f;
-}
-
-.sideNav > .sideMenu-Items > ul > li > span {
-    padding-left: 8px;
-}
 
 li.active {
-    background-color: #a7abfb6f;
-    color: white;
-}
-
-.sideMenu-Items > ul > li {
+    background-color: #a7abfb6f; /* Highlight color */
+    color: white; /* Text color when active */
+  }
+  
+  .sideMenu-Items ul li {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.sideMenu-Items > ul > li:hover {
-    background-color: #e0e0e0;
-}
-
-.sideMenu-Items > ul > li.active > .list-text {
-    font-weight: bold;
-}
+  }
+  
+  .sideMenu-Items ul li:hover {
+    background-color: #e0e0e0; /* Hover effect */
+  }
+  
+  .sideMenu-Items ul li.active .list-text {
+    font-weight: bold; /* text bold */
+  }
