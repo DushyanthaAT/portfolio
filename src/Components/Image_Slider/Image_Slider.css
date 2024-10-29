@@ -1,51 +1,47 @@
-.cer-container {
+.cer-container{
     text-align: center;
     background-color: var(--secColor);
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     overflow: hidden;
     border-radius: 30px;
-    display: flex !important;
+    display: flex!important;
     flex-direction: column;
     padding-bottom: 10px;
+    .cer-img{
+        background-color:  var(--secColor);
+        width: 100%;
+        padding: 10px 10px 5px 10px;
+        flex: 10;
+        img{
+            width: calc(100% - 20px);
+            height: 100%;
+            border-radius: 15px;
+        }
+    }
+    .cer-title{
+        flex:1;
+        line-height: 1.2rem;
+    }
+    
 }
-
-.cer-container .cer-img {
-    background-color: var(--secColor);
-    width: 100%;
-    padding: 10px 10px 5px 10px;
-    flex: 10;
-}
-
-.cer-container .cer-img img {
-    width: calc(100% - 20px);
-    height: 100%;
-    border-radius: 15px;
-}
-
-.cer-container .cer-title {
-    flex: 1;
-    line-height: 1.2rem;
-}
-
 .slick-slide > div {
-    margin: 0px 20px;
+    margin:0px 20px;
 }
-
 .slick-dots li button:before {
     color: white;
     margin-top: 20px;
     font-size: 0.5rem;
+  }
+  .slick-dots li.slick-active button:before {
+    color:var(--appBlue) !important;
 }
 
-.slick-dots li.slick-active button:before {
-    color: var(--appBlue) !important;
-}
 
-@media (max-width: 900px) {
-    .cer-container {
+@media (max-width:900px) {
+    .cer-container{
         min-width: 100px;
     }
-    .cer-title {
-        font-size: 0.7rem !important;
+    .cer-title{
+        font-size: 0.7rem !important;    
     }
 }
