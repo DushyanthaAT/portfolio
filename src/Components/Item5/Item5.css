@@ -1,47 +1,42 @@
-.item-5in{
-    display: flex;
-    flex-direction: column;
-    /* background-color: var(--priColor); */
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 100%;
-    
-    position: relative;
-    z-index: 2;
-    pointer-events: none;
+.item-5in {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.btn-cont{
-    pointer-events: auto;
-    cursor: pointer;
-    margin-top: 5px;
+.btn-cont {
+  pointer-events: auto;
+  cursor: pointer;
+  margin-top: 5px;
 }
 
-.HoverBorderGradient{
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-
-    background-color: #00adf2; 
+.HoverBorderGradient {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #00adf2;
   transition: background-color 0.3s ease;
+}
 
-    .text{
-        font-size: 0.7rem;
-    }
+.HoverBorderGradient > .text {
+  font-size: 0.7rem;
 }
 
 .HoverBorderGradient:hover {
-    background-color: black; 
-  }
+  background-color: black;
+}
 
-
-  .download-btn {
-    text-decoration: none;  
-    color: inherit;         
-    display: inline-block;  
-  }
+.download-btn {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
