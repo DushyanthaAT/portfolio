@@ -1,25 +1,21 @@
-.item-1in{
+.item-1in {
     display: flex;
     flex-direction: column;
-    /* background: var(--priColor); */
     border-radius: 25px;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width:auto; 
+    width: auto;
     position: relative;
     z-index: 2;
     pointer-events: none;
-    .num{
-        font-size: 2.5rem;
-    }
-    .stext{
-        color: var(--textCol3);
-        font-size: 0.75rem;
-
-    }
 }
 
- 
+.item-1in .num {
+    font-size: 2.5rem;
+}
 
-  
+.item-1in .stext {
+    color: var(--textCol3);
+    font-size: 0.75rem;
+}
