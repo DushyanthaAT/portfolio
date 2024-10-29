@@ -1,4 +1,4 @@
-.ProContainer {
+.ProContainer{
     display: flex;
     flex-direction: column;
     width: auto;
@@ -6,118 +6,103 @@
     border-radius: 24px;
     background-color: var(--secColor);
     padding: 15px;
+    .Cflex1{
+        height: auto;
+        margin-bottom: 15px;
+        gap: 10px;
+        .ProIcon{
+            width: 25px;
+            height: 25px;
+            display: flex;
+            img{
+                width: 100%;
+                height:100%;
+                border-radius: 50px;
+                margin-right: 6px;
+                padding: 2px;
+                background-color:rgb(255, 255, 255);
+            }
+        }
+    }
+    .Cflex2{
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            object-fit: cover; 
+            max-width: 100%;
+            /* margin: 0px 20px; */
+        }
+    }
+    .Cflex3{
+        height: 7rem;
+        display: flex;
+        flex-direction: column;
+        .ProTitle{
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0px;
+        }
+        .ProDescription{
+            font-size: 0.8rem;
+            color:var(--textCol3);
+            text-align: justify;
+            line-height: 0.9rem;
+        }
+    }
+    .Cflex4{
+        margin-top: 20px;
+        height: auto;
+        .button{
+            display: flex;
+            .btn-icon{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-color: var(--appBlue);
+                color: white;
+                border-radius: 100px;
+                text-align: center;
+                margin: 0px 10px 0px 0px;
+                overflow: hidden;
+                white-space: nowrap;
+                transition: all 0.3s ease-out;
+                justify-content: center;
+                .icon{
+                    float:left;
+                }
+                i{
+                    padding: 10px;
+                    font-size: 1.8rem;
+                }
+                span{
+                    text-align: left;
+                    visibility: hidden;
+                }
+            }
+            .btn-icon:hover{
+                margin: 0px 8px 0px 0px;
+                width: 150px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                color: var(--appBlue);
+                span{
+                    font-size: 0.9rem;
+                    visibility: visible;
+                    font-weight:500;
+                    margin-right: 10px;
+                    color: var(--secColor);
+                }
+            }
+        }
+    }
 }
 
-.ProContainer > .Cflex1 {
-    height: auto;
-    margin-bottom: 15px;
-    gap: 10px;
-}
-
-.ProContainer > .Cflex1 > .ProIcon {
-    width: 25px;
-    height: 25px;
-    display: flex;
-}
-
-.ProContainer > .Cflex1 > .ProIcon > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    margin-right: 6px;
-    padding: 2px;
-    background-color: rgb(255, 255, 255);
-}
-
-.ProContainer > .Cflex2 {
-    height: auto;
-}
-
-.ProContainer > .Cflex2 > img {
-    width: 100%;
-    height: auto;
-    border-radius: 24px;
-    object-fit: cover;
-    max-width: 100%;
-}
-
-.ProContainer > .Cflex3 {
-    height: 7rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.ProContainer > .Cflex3 > .ProTitle {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 10px 0px;
-}
-
-.ProContainer > .Cflex3 > .ProDescription {
-    font-size: 0.8rem;
-    color: var(--textCol3);
-    text-align: justify;
-    line-height: 0.9rem;
-}
-
-.ProContainer > .Cflex4 {
-    margin-top: 20px;
-    height: auto;
-}
-
-.ProContainer > .Cflex4 > .button {
-    display: flex;
-}
-
-.ProContainer > .Cflex4 > .button > .btn-icon {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: var(--appBlue);
-    color: white;
-    border-radius: 100px;
-    text-align: center;
-    margin: 0px 10px 0px 0px;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: all 0.3s ease-out;
-    justify-content: center;
-}
-
-.ProContainer > .Cflex4 > .button > .btn-icon > .icon {
-    float: left;
-}
-
-.ProContainer > .Cflex4 > .button > .btn-icon > i {
+.com-icon{
     padding: 10px;
-    font-size: 1.8rem;
-}
-
-.ProContainer > .Cflex4 > .button > .btn-icon > span {
-    text-align: left;
-    visibility: hidden;
-}
-
-.ProContainer > .Cflex4 > .button > .btn-icon:hover {
-    margin: 0px 8px 0px 0px;
-    width: 150px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    color: var(--appBlue);
-}
-
-.ProContainer > .Cflex4 > .button > .btn-icon:hover > span {
-    font-size: 0.9rem;
-    visibility: visible;
-    font-weight: 500;
-    margin-right: 10px;
-    color: var(--secColor);
-}
-
-.com-icon {
-    padding: 10px;
-    font-size: 1.8rem;
+                    font-size: 1.8rem;
 }
