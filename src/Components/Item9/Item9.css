@@ -1,4 +1,4 @@
-.item-9in{
+.item-9in {
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -8,18 +8,19 @@
     align-items: center;
     position: relative;
     z-index: 2;
-    .imgSlider{
-        width: 80%;
-        margin: 30px 0px;
-    }
-    .winnings-header{
-        text-align: center;
-    }
-    
+}
+
+.item-9in > .imgSlider {
+    width: 80%;
+    margin: 30px 0px;
+}
+
+.item-9in > .winnings-header {
+    text-align: center;
 }
 
 @media (max-width:900px) {
-    .imgSlider{
-        width:20%;
+    .item-9in > .imgSlider {
+        width: 20%;
     }
 }
