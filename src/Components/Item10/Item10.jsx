@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Item10.css";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Item10 = () => {
   const form = useRef();
+  const [error, setError] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Check if all fields are filled
+    const userName = form.current.user_name.value.trim();
+    const userEmail = form.current.user_email.value.trim();
+    const message = form.current.message.value.trim();
+
+    if (!userName || !userEmail || !message) {
+      // Set error state to true for empty fields
+      setError({
+        name: !userName,
+        email: !userEmail,
+        message: !message,
+      });
+      return; // Prevent form submission
+    }
+
+    // If no fields are missing, proceed with email sending
     emailjs
       .sendForm(
         "service_evyyrqj",
@@ -26,20 +46,23 @@ const Item10 = () => {
           console.log(result.text);
           console.log("message sent");
           form.current.reset();
+          setError({ name: false, email: false, message: false }); // Reset error state
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
+
   return (
     <div className="contact-container">
       <div className="left-flex">
+        {/* Contact Information */}
         <div className="text-wrapper-cot">
           <span className="txt1">Contact me</span>
         </div>
         <div className="left-wrapper">
-          {/* phone */}
+          {/* Contact details */}
           <div className="cinfo-container">
             <div className="cinfo-icon">
               <PhoneAndroidIcon sx={{ fontSize: "1.5rem" }} />
@@ -49,7 +72,6 @@ const Item10 = () => {
               <span className="cinfo-data">+94 71 7 176620</span>
             </div>
           </div>
-          {/* email */}
           <div className="cinfo-container">
             <div className="cinfo-icon">
               <MailOutlineOutlinedIcon sx={{ fontSize: "1.5rem" }} />
@@ -90,16 +112,27 @@ const Item10 = () => {
           </div>
         </div>
       </div>
+
       <div className="right-flex">
-        <form ref={form} onSubmit={sendEmail} autocomplete="off">
-          <input type="text" name="user_name" placeholder="Your Name" />
+        <form ref={form} onSubmit={sendEmail} autoComplete="off">
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            style={{ borderColor: error.name ? "red" : "" }}
+          />
           <input
             type="email"
             name="user_email"
             placeholder="Your E-mail"
-            autocomplete="off"
+            style={{ borderColor: error.email ? "red" : "" }}
+            autoComplete="off"
           />
-          <textarea name="message" placeholder="Type your message here..." />
+          <textarea
+            name="message"
+            placeholder="Type your message here..."
+            style={{ borderColor: error.message ? "red" : "" }}
+          />
           <input type="submit" value="Send" />
         </form>
       </div>
