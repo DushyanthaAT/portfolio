@@ -72,6 +72,8 @@ const IntroScreen = () => {
       },
       "-=1"
     );
+
+    // No need for a separate animate function
   }, []);
 
   if (isIntroComplete) {
