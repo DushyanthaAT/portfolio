@@ -225,7 +225,7 @@
     content: '';
     position: absolute;
     inset: 2px; 
-    border-radius: 18px;
+    border-radius: 20px;
     background:var(--priColorLight);
     opacity: 0.9; 
     z-index: 0;

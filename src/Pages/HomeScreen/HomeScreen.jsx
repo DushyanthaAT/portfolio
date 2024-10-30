@@ -1,6 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import "./Home.css";
 import SideNav from "../../Components/SideNav/SideNav";
+import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
+import { Typewriter } from "react-simple-typewriter";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../responsive.css";
+import "./homebg.css";
+
 import Item1 from "../../Components/Item1/Item1";
 import Item2 from "../../Components/Item2/Item2";
 import Item3 from "../../Components/Item3/Item3";
@@ -12,23 +19,20 @@ import Item8 from "../../Components/Item8/Item8";
 import Item9 from "../../Components/Item9/Item9";
 import Item10 from "../../Components/Item10/Item10";
 import Item11 from "../../Components/Item11/Item11";
-import "../responsive.css";
-import BottomNavMobile from "../../Components/bottomNav/BottomNavMobile";
-import { Typewriter } from "react-simple-typewriter";
-import "./homebg.css";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HomeScreen = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
   const [isLoaded, setIsLoaded] = useState(false);
   const gridContainerRef = useRef(null);
   const sideNavRef = useRef(null);
   const headingRef = useRef(null);
+  const animateEntrance = (ref, fromVars, toVars) => {
+    gsap.fromTo(ref, fromVars, toVars);
+  };
 
   useEffect(() => {
-    gsap.fromTo(
+    animateEntrance(
       headingRef.current,
       { x: "-100%", opacity: 0 },
       { x: "0%", opacity: 1, duration: 1, ease: "power2.out", delay: 0.5 }
@@ -37,7 +41,7 @@ const HomeScreen = () => {
 
   useEffect(() => {
     if (sideNavRef.current) {
-      gsap.fromTo(
+      animateEntrance(
         sideNavRef.current,
         { x: "-250px", opacity: 0 },
         { x: "0px", opacity: 1, duration: 1, ease: "power2.out" }
@@ -46,19 +50,16 @@ const HomeScreen = () => {
   }, []);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoaded(true);
-    }, 500);
+    const timeout = setTimeout(() => setIsLoaded(true), 500);
     return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
     if (isLoaded) {
-      const batch = ScrollTrigger.batch(".grid-cards", {
+      const batchAnimation = ScrollTrigger.batch(".grid-cards", {
         duration: 1,
         start: "top 95%",
         end: "bottom 8%",
-        // markers: true,
         onEnter: (batch) =>
           gsap.fromTo(
             batch,
@@ -85,29 +86,39 @@ const HomeScreen = () => {
           }),
       });
 
-      const resizeObserver = new ResizeObserver(() => {
-        ScrollTrigger.refresh();
-      });
-
-      if (gridContainerRef.current) {
+      const resizeObserver = new ResizeObserver(() => ScrollTrigger.refresh());
+      if (gridContainerRef.current)
         resizeObserver.observe(gridContainerRef.current);
-      }
 
       return () => {
         resizeObserver.disconnect();
-        batch.kill();
+        batchAnimation.kill();
       };
     }
   }, [isLoaded]);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = useCallback((e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
     e.currentTarget.style.setProperty("--x", `${x}px`);
     e.currentTarget.style.setProperty("--y", `${y}px`);
-  };
+  }, []);
+
+  const items = [
+    { Component: Item1, id: "home" },
+    { Component: Item2, id: "home" },
+    { Component: Item3, id: "iam" },
+    { Component: Item4, id: "status" },
+    { Component: Item5, id: "home" },
+    { Component: Item6, id: "home" },
+    { Component: Item7, id: "about" },
+    { Component: Item8, id: "portfolio" },
+    { Component: Item9, id: "winnings" },
+    { Component: Item10, id: "contacts" },
+    { Component: Item11, id: "contacts" },
+  ];
 
   return (
     <div className="document">
@@ -150,29 +161,13 @@ const HomeScreen = () => {
             </span>
           </span>
           <div className="grid-container" ref={gridContainerRef}>
-            {[
-              { Component: Item1, id: "home" },
-              { Component: Item2, id: "home" },
-              { Component: Item3, id: "iam" },
-              { Component: Item4, id: "status" },
-              { Component: Item5, id: "home" },
-              { Component: Item6, id: "home" },
-              { Component: Item7, id: "about" },
-              { Component: Item8, id: "portfolio" },
-              { Component: Item9, id: "winnings" },
-              { Component: Item10, id: "contacts" },
-              { Component: Item11, id: "contacts" },
-            ].map(({ Component, id }, index) => (
+            {items.map(({ Component, id }, index) => (
               <div
                 key={index}
                 id={id}
                 className={`item-${index + 1} item-hover grid-cards`}
                 onMouseMove={handleMouseMove}
-                style={{
-                  opacity: 0,
-                  y: 100,
-                  "--clr": "#00adf2",
-                }}
+                style={{ opacity: 0, y: 100, "--clr": "#00adf2" }}
               >
                 <Component />
               </div>

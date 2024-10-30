@@ -21,6 +21,8 @@ import ps from "./icons/ps.png";
 import ai from "./icons/ai.png";
 import unity from "./icons/unity.png";
 import csharp from "./icons/csharp.png";
+import tailwind from "./icons/tailwind.png";
+
 import VCK from "./VCK.jpg";
 import SUSL from "./SUSL.jpg";
 import YP from "./YP.jpg";
@@ -43,6 +45,7 @@ import uxplore from "./Winnings/uxplore.jpg";
 import codefest2022 from "./Winnings/codefest2022.jpg";
 import codefest2021 from "./Winnings/codefest2021.jpg";
 import hacktrone from "./Winnings/hacktrone.jpg";
+import hackx from "./Winnings/hackx.jpg";
 
 export {
   profileImage,
@@ -66,6 +69,7 @@ export {
   xd,
   ps,
   ai,
+  tailwind,
   VCK,
   SUSL,
   YP,
@@ -89,4 +93,5 @@ export {
   codefest2022,
   codefest2021,
   hacktrone,
+  hackx,
 };
