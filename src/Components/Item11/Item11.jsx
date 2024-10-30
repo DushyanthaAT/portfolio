@@ -11,7 +11,7 @@ const Item11 = () => {
     window.open(GDPurl, "_blank");
   };
   return (
-    <div className="por-container">
+    <div className="item por-container">
       <div className="por-icon">
         <ImageSearchIcon />
       </div>

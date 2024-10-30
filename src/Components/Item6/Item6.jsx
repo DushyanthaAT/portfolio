@@ -18,7 +18,7 @@ import {
   python,
   react,
   xd,
-  webSite,
+  tailwind,
 } from "../../images";
 import "./Item6.css";
 
@@ -42,8 +42,8 @@ const Item6 = () => {
           <div className="exp-right-flex2">
             <Icons ImgURL={nodeJs} Name="NodeJs" className="exp-icon" />
             <Icons ImgURL={react} Name="React" className="exp-icon" />
+            <Icons ImgURL={tailwind} Name="TailwindCSS" className="exp-icon" />
             <Icons ImgURL={flutter} Name="Flutter" className="exp-icon" />
-            <Icons ImgURL={boostrap} Name="Boostrap" className="exp-icon" />
             <Icons ImgURL={firebase} Name="Firebase" className="exp-icon" />
           </div>
           <div className="exp-right-flex3">

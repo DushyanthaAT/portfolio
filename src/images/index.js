@@ -45,6 +45,7 @@ import uxplore from "./Winnings/uxplore.jpg";
 import codefest2022 from "./Winnings/codefest2022.jpg";
 import codefest2021 from "./Winnings/codefest2021.jpg";
 import hacktrone from "./Winnings/hacktrone.jpg";
+import hackx from "./Winnings/hackx.jpg";
 
 export {
   profileImage,
@@ -92,4 +93,5 @@ export {
   codefest2022,
   codefest2021,
   hacktrone,
+  hackx,
 };

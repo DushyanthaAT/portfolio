@@ -7,6 +7,7 @@ import {
   codefest2022,
   codesprints,
   hacktrone,
+  hackx,
   ix23,
   masterdesigner,
   slasscom,
@@ -55,6 +56,10 @@ function Image_Slider() {
     {
       img_title: "Winner - Individual Category in Master Designer V2.0",
       img_src: masterdesigner,
+    },
+    {
+      img_title: "Most Innovative Team of hackX 9.0",
+      img_src: hackx,
     },
     {
       img_title: "Finalist in CodeSprint 8",
