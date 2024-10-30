@@ -188,6 +188,10 @@
     .rightArea>.grid-container{
         margin-bottom: 50px;
     }
+    .about-container .about-me .container2 .amRight .txt2 {
+        padding: 0px 0px 0px 0px !important;
+    }
+
 }
 
 @media (max-width:640px) {

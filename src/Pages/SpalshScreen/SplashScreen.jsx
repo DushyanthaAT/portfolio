@@ -23,7 +23,7 @@ const IntroScreen = () => {
         backgroundPosition: "-100%",
         opacity: 1,
         scale: 1,
-        duration: 5,
+        duration: 3,
         ease: "power2.inOut",
       },
       "="
@@ -37,7 +37,7 @@ const IntroScreen = () => {
         backgroundPosition: "100%",
         opacity: 1,
         scale: 1,
-        duration: 5,
+        duration: 3,
         ease: "power2.inOut",
       },
       "="
@@ -48,7 +48,7 @@ const IntroScreen = () => {
       {
         backgroundPosition: "100%",
         color: "#fff",
-        duration: 3,
+        duration: 2,
       },
       "-=2"
     );
@@ -58,7 +58,7 @@ const IntroScreen = () => {
       {
         backgroundPosition: "-100%",
         color: "#fff",
-        duration: 3,
+        duration: 2,
       },
       "-=2"
     );
@@ -68,7 +68,7 @@ const IntroScreen = () => {
       {
         background: "none",
         color: "#000",
-        duration: 3,
+        duration: 2,
       },
       "-=1"
     );
