@@ -28,6 +28,7 @@ const Item7 = () => {
             <img src={profileImage} alt="profile image" />
           </div>
           <div className="amRight">
+            <h3>Dushyantha Thilakarathne</h3>
             <span className="txt2 aboutme-para">
               I am a software engineering undergraduate specializing in UI/UX
               design and frontend development. With a strong foundation in
