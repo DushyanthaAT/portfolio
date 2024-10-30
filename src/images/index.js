@@ -21,6 +21,8 @@ import ps from "./icons/ps.png";
 import ai from "./icons/ai.png";
 import unity from "./icons/unity.png";
 import csharp from "./icons/csharp.png";
+import tailwind from "./icons/tailwind.png";
+
 import VCK from "./VCK.jpg";
 import SUSL from "./SUSL.jpg";
 import YP from "./YP.jpg";
@@ -66,6 +68,7 @@ export {
   xd,
   ps,
   ai,
+  tailwind,
   VCK,
   SUSL,
   YP,
