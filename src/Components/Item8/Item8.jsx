@@ -31,6 +31,8 @@ import {
   csharp,
   bom,
   wg,
+  PulsePen,
+  tailwind,
 } from "../../images";
 
 import Tilty from "react-tilty";
@@ -39,6 +41,20 @@ const Item8 = () => {
   const cardData = [
     {
       id: 1,
+      iconImages: [react, tailwind, nodeJs, mongoDB, firebase, figma],
+      imageurl: PulsePen,
+      title: "PulsePen: Weblog",
+      desc: "PulsePen is a full-stack blogging platform built for effortless content creation and management. It allows users to explore articles, publish and organize posts, and admins able to manage users and content, all through a secure and user-friendly interface.",
+      beUrl:
+        "https://www.behance.net/gallery/214190263/PulsePen-Blogging-website-UIUX-Case-Study",
+      gitUrl: "https://github.com/DushyanthaAT/PulsePen",
+      figUrl:
+        "https://www.figma.com/design/thvHA7urbKpSQTI4kHSPqK/PulsePen?node-id=0-1&t=VG1UfpVYBRLBOhuE-1",
+      Category: "Web",
+      designTool: "figma",
+    },
+    {
+      id: 2,
       iconImages: [react, php, mySQL],
       imageurl: LMSSUSL,
       title: "LMS SUSL | Group",
@@ -50,7 +66,7 @@ const Item8 = () => {
       Category: "Mobile",
     },
     {
-      id: 2,
+      id: 3,
       iconImages: [xd, ps, ai],
       imageurl: GOGO,
       title: "gogo - Travel Planning App",
@@ -64,7 +80,7 @@ const Item8 = () => {
       designTool: "xd",
     },
     {
-      id: 3,
+      id: 4,
       iconImages: [react, css, firebase, figma],
       imageurl: unistore,
       title: "Unistore | Group",
@@ -77,7 +93,7 @@ const Item8 = () => {
       designTool: "figma",
     },
     {
-      id: 4,
+      id: 5,
       iconImages: [unity, csharp],
       imageurl: bom,
       title: "Blaze of Magic | Group",
@@ -89,7 +105,7 @@ const Item8 = () => {
       designTool: "itch",
     },
     {
-      id: 5,
+      id: 6,
       iconImages: [xd, ps, ai],
       imageurl: wg,
       title: "WellnessGrocers | Group",
