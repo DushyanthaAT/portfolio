@@ -36,6 +36,7 @@ import GOGO from "./Projects/GOGO.jpg";
 import unistore from "./Projects/unistore.jpg";
 import bom from "./Projects/bom.jpg";
 import wg from "./Projects/wg.jpg";
+import PulsePen from "./Projects/PulsePen.jpg";
 
 import masterdesigner from "./Winnings/masterdesigner.jpg";
 import codesprints from "./Winnings/codesprints.jpg";
@@ -85,6 +86,7 @@ export {
   csharp,
   bom,
   wg,
+  PulsePen,
   masterdesigner,
   codesprints,
   slasscom,
