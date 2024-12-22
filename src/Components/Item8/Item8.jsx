@@ -43,7 +43,7 @@ const Item8 = () => {
       id: 1,
       iconImages: [react, tailwind, nodeJs, mongoDB, firebase, figma],
       imageurl: PulsePen,
-      title: "PulsePen: Weblog",
+      title: "PulsePen: WebBlog",
       desc: "PulsePen is a full-stack blogging platform for easy content creation and management, featuring secure authentication and a user-friendly interface for writers, readers, and admins.",
       beUrl:
         "https://www.behance.net/gallery/214190263/PulsePen-Blogging-website-UIUX-Case-Study",
