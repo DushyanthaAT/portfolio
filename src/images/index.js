@@ -37,6 +37,11 @@ import unistore from "./Projects/unistore.jpg";
 import bom from "./Projects/bom.jpg";
 import wg from "./Projects/wg.jpg";
 import PulsePen from "./Projects/PulsePen.jpg";
+import Bunky from "./Projects/Bunky.jpg";
+import Trophy from "./Projects/Trophy.jpg";
+import Netvision from "./Projects/netVision.jpg";
+import iElect from "./Projects/iElect.jpg";
+import Disastify from "./Projects/Disastify.jpg";
 
 import masterdesigner from "./Winnings/masterdesigner.jpg";
 import codesprints from "./Winnings/codesprints.jpg";
@@ -82,6 +87,11 @@ export {
   LMSSUSL,
   GOGO,
   unistore,
+  Bunky,
+  Trophy,
+  Netvision,
+  iElect,
+  Disastify,
   unity,
   csharp,
   bom,
