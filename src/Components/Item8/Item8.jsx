@@ -60,7 +60,7 @@ const Item8 = () => {
     },
     {
       id: 2,
-      iconImages: [react, php, mySQL],
+      iconImages: [flutter, php, mySQL],
       imageurl: LMSSUSL,
       title: "LMS SUSL | Group",
       desc: "LMS SUSL is the Learning Management System of Sabaragamuwa University of Sri Lanka, providing students and lecturers with a digital platform to manage courses, access resources, and enhance learning through interactive tools.",
