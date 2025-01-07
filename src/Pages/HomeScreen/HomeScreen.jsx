@@ -175,7 +175,7 @@ const HomeScreen = () => {
           </div>
           <div className="web-footer">
             <span className="footer-txt">
-              © 2024 Dushyantha Thilakarathna. All Rights Reserved.
+              © 2025 Dushyantha Thilakarathna. All Rights Reserved.
             </span>
           </div>
         </div>
