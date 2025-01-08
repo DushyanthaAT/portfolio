@@ -7,6 +7,7 @@ const IntroScreen = () => {
   const firstNameRef = useRef(null);
   const lastNameRef = useRef(null);
   const [isIntroComplete, setIsIntroComplete] = useState(false);
+  gsap.ticker.lagSmoothing(false);
 
   useEffect(() => {
     const timeline = gsap.timeline({
